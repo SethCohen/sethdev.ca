@@ -2,6 +2,7 @@ import {Grid, makeStyles, SvgIcon, Typography} from "@material-ui/core";
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
+import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 
 const useStyles = makeStyles({
     container: {
@@ -35,6 +36,7 @@ export default function Homepage() {
                 <Grid item><EmailIcon fontSize="large"/></Grid>
                 <Grid item><GitHubIcon style={{fontSize: 30}}/></Grid>
                 <Grid item><YouTubeIcon fontSize="large"/></Grid>
+                <Grid item><LibraryBooksIcon fontSize="large"/></Grid>
                 <Grid item><SvgIcon style={{fontSize: 25}}>
                     <path d="M14.523,12.031c-1.654,1.481-3.253,2.906-4.843,4.339
 		c-2.711,2.443-5.428,4.882-8.117,7.346c-0.406,0.372-0.728,0.39-1.005-0.013c-0.248-0.358-0.532-0.784-0.534-1.182
