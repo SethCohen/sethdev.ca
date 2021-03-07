@@ -1,18 +1,29 @@
 import './App.css';
-import {BrowserRouter, HashRouter, Route} from "react-router-dom";
+import {BrowserRouter, Route} from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
+import {createMuiTheme, CssBaseline} from "@material-ui/core";
+import { ThemeProvider} from "@material-ui/core";
+
+const theme = createMuiTheme({
+    palette: {
+        type: 'dark',
+    },
+});
 
 export default function App() {
   return (
-    <div className="App">
-        <HashRouter basename="/">
-            <Route exact path="/" component={Homepage}/>
-            <Route path="/portfolio" component={Portfolio}/>
-            <Route exact path="/about" component={About}/>
-        </HashRouter>
-    </div>
+      <ThemeProvider theme={theme}>
+          <CssBaseline/>
+          <div className="App">
+              <BrowserRouter forceRefresh="true">
+                  <Route exact path="/sethdev.ca/" component={Homepage}/>
+                  <Route path="/sethdev.ca/portfolio" component={Portfolio}/>
+                  <Route path="/sethdev.ca/about" component={About}/>
+              </BrowserRouter>
+          </div>
+      </ThemeProvider>
   );
 }
 
