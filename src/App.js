@@ -8,9 +8,9 @@ export default function App() {
   return (
     <div className="App">
         <BrowserRouter forceRefresh={true}>
-            <Route exact path="/" component={Homepage}/>
-            <Route exact path="/portfolio" component={Portfolio}/>
-            <Route exact path="/about" component={About}/>
+            <Route exact path="/sethdev.ca/" component={Homepage}/>
+            <Route exact path="/sethdev.ca/portfolio" component={Portfolio}/>
+            <Route exact path="/sethdev.ca/about" component={About}/>
         </BrowserRouter>
     </div>
   );
