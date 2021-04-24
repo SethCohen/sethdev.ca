@@ -1,42 +1,18 @@
 import * as React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
 import Playstore from "../assets/playstore.svg"
 import Youtube from "../assets/youtube.svg"
 import Github from "../assets/github.svg"
 import Email from "../assets/email.svg"
 import Fiverr from "../assets/fiverr.svg"
 import Seo from "../components/seo"
-import { AppBar, Container, Grid, makeStyles, Toolbar, Typography } from "@material-ui/core"
-import { Button } from "gatsby-theme-material-ui"
-
-const useStyles = makeStyles((theme) => ({
-  title: {
-    flexGrow: 1,
-  },
-}));
+import { Container, Grid, makeStyles } from "@material-ui/core"
+import Header from "../components/header"
 
 export default function Index() {
-  const classes = useStyles();
 
   return (
     <>
-      <AppBar position="static">
-        <Toolbar variant="dense">
-          <Typography variant="h3" style={{ flex: 1 }}>
-            <Link
-              to="/"
-              style={{
-                color: `white`,
-                textDecoration: `none`
-              }}
-            >
-              // Seth
-            </Link>
-          </Typography>
-          <Button color="inherit" component={Link} to="/portfolio">Portfolio</Button>
-          <Button color="inherit" component={Link} to="/about">About</Button>
-        </Toolbar>
-      </AppBar>
+      <Header siteTitle="// Seth"/>
       <Seo title="Home" />
       <Container>
 

@@ -6,6 +6,7 @@
   "author": "Seth Cohen <sethcohen.dev@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "@react-icons/all-files": "^4.1.0",
     "gatsby": "^3.3.1",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
     "gatsby-plugin-image": "^1.2.1",
