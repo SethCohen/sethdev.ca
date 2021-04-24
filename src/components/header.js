@@ -24,6 +24,7 @@ const Header = ({ siteTitle }) => (
           </Link>
         </Typography>
         <Button
+          disableRipple
           style={{
             background: "-webkit-linear-gradient(0deg, #4069B2 25%, #73A7F4 75%)",
             WebkitBackgroundClip: "text",
