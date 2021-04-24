@@ -51,7 +51,7 @@ export default function Portfolio({ data }) {
             <Grid
               item
               key={node.id}
-              xs={12} sm={6} md={4} lg={3}
+              xs={6} sm={6} md={4} lg={3}
             >
               <Link
                 to={node.fields.slug}

@@ -2,7 +2,6 @@
   "name": "sethdev",
   "private": true,
   "description": "Seth's Personal Website & Blog",
-  "version": "0.1.0",
   "author": "Seth Cohen <sethcohen.dev@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
