@@ -24,19 +24,19 @@ export default function Index() {
           style={{ minHeight: "70vh" }}
         >
           <Grid item>
-            <a href="mailto:sethcohen.dev@gmail.com"><Email fill="white" /></a>
+            <a href="mailto:sethcohen.dev@gmail.com" aria-label="Mail"><Email fill="white" /></a>
           </Grid>
           <Grid item>
-            <a href="https://github.com/SethCohen"><Github fill="white" /></a>
+            <a href="https://github.com/SethCohen" aria-label="Github"><Github fill="white" /></a>
           </Grid>
           <Grid item>
-            <a href="https://play.google.com/store/apps/developer?id=SethCohen"><Playstore fill="white" /></a>
+            <a href="https://play.google.com/store/apps/developer?id=SethCohen" aria-label="Playstore"><Playstore fill="white" /></a>
           </Grid>
           <Grid item>
-            <a href="https://www.youtube.com/channel/UCt3r8b3iDiUiQo9SdBRBgNw"><Youtube fill="white" /></a>
+            <a href="https://www.youtube.com/channel/UCt3r8b3iDiUiQo9SdBRBgNw" aria-label="Youtube"><Youtube fill="white" /></a>
           </Grid>
           <Grid item>
-            <a href="https://www.fiverr.com/"><Fiverr fill="white" /></a>
+            <a href="https://www.fiverr.com/" aria-label="Fiverr"><Fiverr fill="white" /></a>
           </Grid>
         </Grid>
       </Container>

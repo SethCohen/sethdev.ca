@@ -5,7 +5,7 @@ import { AppBar, Grid, Toolbar, Typography } from "@material-ui/core"
 import { Button } from "gatsby-theme-material-ui"
 
 const Header = ({ siteTitle }) => (
-  <AppBar position="static">
+  <AppBar position="static" style={{marginBottom: "2%"}}>
     <Toolbar variant="dense">
       <Grid container justify="space-between">
         <Typography variant="h3" style={{
