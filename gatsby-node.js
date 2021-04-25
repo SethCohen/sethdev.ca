@@ -14,12 +14,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions;
   const result = await graphql(`
     query {
       allMarkdownRemark {
         edges {
           node {
+            frontmatter {
+              redirect
+            }
             fields {
               slug
             }
@@ -38,6 +41,9 @@ exports.createPages = async ({ graphql, actions }) => {
         // in page queries as GraphQL variables.
         slug: node.fields.slug,
       },
-    })
+    });
+    if (node.frontmatter.redirect != null){
+      createRedirect({ fromPath: node.fields.slug.toString(), toPath: node.frontmatter.redirect.toString(), isPermanent: true, redirectInBrowser: true, force: true });
+    }
   })
 }
