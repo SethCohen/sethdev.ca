@@ -1,6 +1,6 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="70px" height="70px" viewBox="0 0 70 70" enable-background="new 0 0 70 70" xml:space="preserve">
-<linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="-280" y1="0" x2="350" y2="0">
+<linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="-280" y1="0" x2="70" y2="0">
 	<stop  offset="0.25" style="stop-color:#4069B2"/>
 	<stop  offset="0.75" style="stop-color:#73A7F4"/>
 </linearGradient>
@@ -16,7 +16,7 @@
 	c0.014,0.015,0.021,0.029,0.027,0.057c0.008,0.021,0.016,0.042,0.016,0.063c0.006,0.043,0.014,0.084,0.014,0.127
 	c0.006,0.041,0.006,0.084,0.006,0.125c0,0.049,0,0.084,0,0.127c0,12.033,0,24.066,0,36.1c0,0.041,0,0.084,0,0.125
 	c0,0.021,0,0.049,0.008,0.063c0,0.021,0.008,0.043,0.014,0.064C63.451,57.985,63.465,58.005,63.508,58.14z"/>
-<linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="-280" y1="0" x2="350" y2="0">
+<linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="-280" y1="0" x2="70" y2="0">
 	<stop  offset="0.25" style="stop-color:#4069B2"/>
 	<stop  offset="0.75" style="stop-color:#73A7F4"/>
 </linearGradient>
