@@ -47,6 +47,31 @@ export default function Portfolio({ data }) {
           container
           spacing={4}
         >
+
+          { /* Art folder */ }
+          <Grid
+            item
+            xs={6} sm={6} md={4} lg={3}
+          >
+            <Link
+              to="/portfolio/art/"
+              style={{ textDecoration: "none" }}
+            >
+              <Card className={classes.card}>
+                <CardMedia
+                  className={classes.cardMedia}
+                  image="https://i.imgur.com/8jJNtFP.png"
+                  title="Art & Designs"
+                />
+                <Box className={classes.cardTextOverlay}>
+                  <Typography variant="h5">
+                    <strong>Art & Designs</strong>
+                  </Typography>
+                </Box>
+              </Card>
+            </Link>
+          </Grid>
+
           {data.allMarkdownRemark.edges.map(({ node }) => (
             <Grid
               item
