@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Header from "../../components/header";
 import Seo from "../../components/seo";
-import Gallery from '@browniebroke/gatsby-image-gallery'
+import { default as ImageGallery } from '@browniebroke/gatsby-image-gallery'
 import { Container, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
 
 }));
 
-export default function Art({ data }) {
+export default function Gallery({ data }) {
   const classes = useStyles();
 
   const images = data.allFile.edges.map(({ node }) => ({
@@ -24,8 +24,8 @@ export default function Art({ data }) {
   return (
     <>
       <Header siteTitle="// Seth Cohen" />
-      <Seo title="Art" />
-      <Container className={classes.padding}><Gallery images={images} /></Container>
+      <Seo title="Gallery" />
+      <Container className={classes.padding}><ImageGallery images={images} /></Container>
     </>
   );
 
@@ -33,7 +33,7 @@ export default function Art({ data }) {
 
 export const query = graphql`
   query {
-    allFile(filter:{relativeDirectory:{ eq: "assets/art"}}) {
+    allFile(filter:{relativeDirectory:{ eq: "assets/gallery"}}) {
       edges {
         node {
           childImageSharp {
@@ -42,7 +42,10 @@ export const query = graphql`
               height: 270
               placeholder: BLURRED
             )
-            full: gatsbyImageData(layout: FULL_WIDTH)
+            full: gatsbyImageData(
+              layout: FULL_WIDTH
+              quality: 100
+            )
             meta: fixed {
               originalName
             }

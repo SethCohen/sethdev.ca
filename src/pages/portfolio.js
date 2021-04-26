@@ -54,7 +54,7 @@ export default function Portfolio({ data }) {
             xs={6} sm={6} md={4} lg={3}
           >
             <Link
-              to="/portfolio/art/"
+              to="/portfolio/gallery/"
               style={{ textDecoration: "none" }}
             >
               <Card className={classes.card}>
