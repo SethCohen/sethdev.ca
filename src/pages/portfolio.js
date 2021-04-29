@@ -5,7 +5,7 @@ import {
   Card,
   CardMedia,
   Container,
-  Grid,
+  Grid, Grow,
   makeStyles,
   Typography
 } from "@material-ui/core";
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardMedia: {
     height: "0px",
-    paddingTop: "100%",
+    paddingTop: "100%"
   },
   cardTextOverlay: {
     position: "absolute",
@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     right: "0",
     padding: "5%",
     backgroundColor: "rgba(0,0,0,0.60)"
-  },
+  }
 }));
 
 export default function Portfolio({ data }) {
@@ -43,64 +43,67 @@ export default function Portfolio({ data }) {
       <Header siteTitle="// Seth Cohen" />
       <Seo title="Portfolio" />
       <Container className={classes.cardGrid}>
-        <Grid
-          container
-          spacing={4}
-        >
 
-          { /* Art folder */ }
+        <Grow in={true}>
           <Grid
-            item
-            xs={6} sm={6} md={4} lg={3}
+            container
+            spacing={4}
           >
-            <Link
-              to="/portfolio/gallery/"
-              style={{ textDecoration: "none" }}
-            >
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image="https://i.imgur.com/8jJNtFP.png"
-                  title="Art & Designs"
-                />
-                <Box className={classes.cardTextOverlay}>
-                  <Typography variant="h5">
-                    <strong>Art & Designs</strong>
-                  </Typography>
-                </Box>
-              </Card>
-            </Link>
-          </Grid>
 
-          {data.allMarkdownRemark.edges.map(({ node }) => (
+            { /* Art folder */}
             <Grid
               item
-              key={node.id}
               xs={6} sm={6} md={4} lg={3}
             >
               <Link
-                to={node.fields.slug}
+                to="/portfolio/gallery/"
                 style={{ textDecoration: "none" }}
               >
                 <Card className={classes.card}>
                   <CardMedia
                     className={classes.cardMedia}
-                    image={node.frontmatter.image}
-                    title={node.frontmatter.title}
+                    image="https://i.imgur.com/8jJNtFP.png"
+                    title="Art & Designs"
                   />
                   <Box className={classes.cardTextOverlay}>
                     <Typography variant="h5">
-                      <strong>{node.frontmatter.title}</strong>
-                    </Typography>
-                    <Typography variant="subtitle2">
-                      {node.frontmatter.date}
+                      <strong>Art & Designs</strong>
                     </Typography>
                   </Box>
                 </Card>
               </Link>
             </Grid>
-          ))}
-        </Grid>
+
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+              <Grid
+                item
+                key={node.id}
+                xs={6} sm={6} md={4} lg={3}
+              >
+                <Link
+                  to={node.fields.slug}
+                  style={{ textDecoration: "none" }}
+                >
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      image={node.frontmatter.image}
+                      title={node.frontmatter.title}
+                    />
+                    <Box className={classes.cardTextOverlay}>
+                      <Typography variant="h5">
+                        <strong>{node.frontmatter.title}</strong>
+                      </Typography>
+                      <Typography variant="subtitle2">
+                        {node.frontmatter.date}
+                      </Typography>
+                    </Box>
+                  </Card>
+                </Link>
+              </Grid>
+            ))}
+          </Grid>
+        </Grow>
       </Container>
     </>
   );
