@@ -37,35 +37,35 @@ export default function Index() {
           >
             <Grid item>
               <Tooltip title="Github Sponsor" aria-label="Github Sponsor">
-                <a href="https://github.com/sponsors/SethCohen" aria-label="Github Sponsor">
+                <a href="https://github.com/sponsors/SethCohen" target="_blank" rel="noreferrer noopener" aria-label="Github Sponsor">
                   <GithubSponsor className="githubsponsor" />
                 </a>
               </Tooltip>
             </Grid>
             <Grid item>
               <Tooltip title="Buy Me A Coffee" aria-label="Buy Me A Coffee">
-                <a href="https://www.buymeacoffee.com/SethCohen" aria-label="Buy Me A Coffee">
+                <a href="https://www.buymeacoffee.com/SethCohen" target="_blank" rel="noreferrer noopener" aria-label="Buy Me A Coffee">
                   <BuyMeACoffee className="buymeacoffee" />
                 </a>
               </Tooltip>
             </Grid>
             <Grid item>
               <Tooltip title="Paypal" aria-label="Paypal">
-                <a href="https://paypal.me/SethCohenDev" aria-label="Paypal">
+                <a href="https://paypal.me/SethCohenDev" target="_blank" rel="noreferrer noopener" aria-label="Paypal">
                   <Paypal className="paypal" />
                 </a>
               </Tooltip>
             </Grid>
             <Grid item>
               <Tooltip title="Ko-Fi" aria-label="Ko-Fi">
-                <a href="#" aria-label="Ko-Fi">
+                <a href="#" target="_blank" rel="noreferrer noopener" aria-label="Ko-Fi">
                   <Kofi className="kofi" />
                 </a>
               </Tooltip>
             </Grid>
             <Grid item>
               <Tooltip title="Patreon" aria-label="Patreon">
-                <a href="#" aria-label="Patreon">
+                <a href="#" target="_blank" rel="noreferrer noopener" aria-label="Patreon">
                   <Patreon className="patreon" />
                 </a>
               </Tooltip>
