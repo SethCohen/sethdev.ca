@@ -6,11 +6,11 @@ import { Button } from "gatsby-theme-material-ui";
 
 const CustomButton = withStyles({
   root: {
-    background: "-webkit-linear-gradient(0deg, #4069B2 15%, #73A7F4 85%)",
+    background: "-webkit-linear-gradient(0deg, #4069B2 25%, #73A7F4 75%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     '&:hover': {
-      background: "-webkit-linear-gradient(0deg, #4069B2 5%, #a7caff 95%)",
+      background: "-webkit-linear-gradient(0deg, #4069B2 25%, #8fb8f6 75%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
     },
@@ -23,7 +23,7 @@ const CustomTypography = withStyles({
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
     '&:hover': {
-      background: "-webkit-linear-gradient(0deg, #4069B2 25%, #a7caff 75%)",
+      background: "-webkit-linear-gradient(0deg, #4069B2 25%, #8fb8f6 75%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
     },
