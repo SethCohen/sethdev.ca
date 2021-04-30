@@ -10,11 +10,12 @@ everything works wonderfully and efficiently.
 
 ---
 
-### A Little Bit About My Website:
+### A Little Bit More About My Website:
 
 - Styled using the Material UI framework.
 - Custom dark theme
 - Powered by Gatsby.
+- Accessibility; most - if not all - elements have some sort of screenreader accessible attribute for the impaired.
 - Full 100s across the board on Chrome's Lighthouse Audit.
 - Completely static & client-side oriented, no server-side operations - thus allowing extremely quick loading.
 - Internal routing & client-side external redirection.
@@ -26,4 +27,4 @@ everything works wonderfully and efficiently.
 - RSS Feed; all site content gets parsed into an xml that can be accessed from https://sethdev.ca/rss.xml
 - Animations, transitions, and effects; various elements have custom onHover effects such as changing gradient colours
   or increasing the size of the element, etc
-
+  
