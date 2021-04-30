@@ -1,8 +1,34 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { AppBar, Box, Grid, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Box, Grid, withStyles, Toolbar, Typography } from "@material-ui/core";
 import { Button } from "gatsby-theme-material-ui";
+
+const CustomButton = withStyles({
+  root: {
+    background: "-webkit-linear-gradient(0deg, #4069B2 15%, #73A7F4 85%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    '&:hover': {
+      background: "-webkit-linear-gradient(0deg, #4069B2 5%, #a7caff 95%)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    },
+  },
+})(Button);
+
+const CustomTypography = withStyles({
+  root: {
+    background: "-webkit-linear-gradient(0deg, #4069B2 25%, #73A7F4 75%)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    '&:hover': {
+      background: "-webkit-linear-gradient(0deg, #4069B2 25%, #a7caff 75%)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+    },
+  },
+})(Typography);
 
 const Header = ({ siteTitle }) => (
   <AppBar position="static" style={{ marginBottom: "2%" }}>
@@ -12,11 +38,7 @@ const Header = ({ siteTitle }) => (
         justify="space-between"
         alignItems="center"
       >
-        <Typography variant="h3" style={{
-          background: "-webkit-linear-gradient(0deg, #4069B2 25%, #73A7F4 75%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent"
-        }}>
+        <CustomTypography variant="h3">
           <Link
             to="/"
             style={{
@@ -26,32 +48,22 @@ const Header = ({ siteTitle }) => (
           >
             {siteTitle}
           </Link>
-        </Typography>
+        </CustomTypography>
         <Box>
-          <Button
+          <CustomButton
             disableRipple
-            style={{
-              background: "-webkit-linear-gradient(0deg, #4069B2 15%, #73A7F4 85%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent"
-            }}
             component={Link}
             to="/support-me"
           >
             Support Me
-          </Button>
-          <Button
+          </CustomButton>
+          <CustomButton
             disableRipple
-            style={{
-              background: "-webkit-linear-gradient(0deg, #4069B2 15%, #73A7F4 85%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent"
-            }}
             component={Link}
             to="/portfolio"
           >
             Portfolio
-          </Button>
+          </CustomButton>
         </Box>
       </Grid>
     </Toolbar>
