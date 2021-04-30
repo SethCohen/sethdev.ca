@@ -42,9 +42,9 @@ export default function Portfolio({ data }) {
     <>
       <Header siteTitle="// Seth Cohen" />
       <Seo title="Portfolio" />
-      <Container className={classes.cardGrid}>
+      <Grow in={true}>
+        <Container className={classes.cardGrid}>
 
-        <Grow in={true}>
           <Grid
             container
             spacing={4}
@@ -103,8 +103,8 @@ export default function Portfolio({ data }) {
               </Grid>
             ))}
           </Grid>
-        </Grow>
-      </Container>
+        </Container>
+      </Grow>
     </>
   );
 }

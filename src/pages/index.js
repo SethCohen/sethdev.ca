@@ -1,9 +1,9 @@
 import * as React from "react";
-import Playstore from "../assets/playstore.svg";
-import Youtube from "../assets/youtube.svg";
-import Github from "../assets/github.svg";
-import Email from "../assets/email.svg";
-import Fiverr from "../assets/fiverr.svg";
+import Playstore from "../assets/icons/playstore.svg";
+import Youtube from "../assets/icons/youtube.svg";
+import Github from "../assets/icons/github.svg";
+import Email from "../assets/icons/email.svg";
+import Fiverr from "../assets/icons/fiverr.svg";
 import Seo from "../components/seo";
 import { Container, Grid, Grow, Tooltip } from "@material-ui/core";
 import Header from "../components/header";
@@ -16,9 +16,8 @@ export default function Index() {
     <>
       <Header siteTitle="// Seth Cohen" />
       <Seo title="Home" />
-      <Container>
-
-        <Grow in={true}>
+      <Grow in={true}>
+        <Container>
           <Grid
             container
             spacing="3"
@@ -62,8 +61,8 @@ export default function Index() {
               </Tooltip>
             </Grid>
           </Grid>
-        </Grow>
-      </Container>
+        </Container>
+      </Grow>
     </>
   );
 }
