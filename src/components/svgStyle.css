@@ -1,0 +1,34 @@
+.email {
+    fill: url(#before1);
+}
+.email:hover {
+    fill: url(#after1);
+}
+
+.github {
+    fill: url(#before2);
+}
+.github:hover {
+    fill: url(#after2);
+}
+
+.playstore {
+    fill: url(#before3);
+}
+.playstore:hover {
+    fill: url(#after3);
+}
+
+.youtube {
+    fill: url(#before4);
+}
+.youtube:hover {
+    fill: url(#after4);
+}
+
+.fiverr {
+    fill: url(#before5);
+}
+.fiverr:hover {
+    fill: url(#after5);
+}
