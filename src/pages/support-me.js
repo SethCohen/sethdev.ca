@@ -58,14 +58,14 @@ export default function Index() {
             </Grid>
             <Grid item>
               <Tooltip title="Ko-Fi" aria-label="Ko-Fi">
-                <a href="#" target="_blank" rel="noreferrer noopener" aria-label="Ko-Fi">
+                <a href="https://ko-fi.com/sethcohen" target="_blank" rel="noreferrer noopener" aria-label="Ko-Fi">
                   <Kofi className="kofi" />
                 </a>
               </Tooltip>
             </Grid>
             <Grid item>
               <Tooltip title="Patreon" aria-label="Patreon">
-                <a href="#" target="_blank" rel="noreferrer noopener" aria-label="Patreon">
+                <a href="https://www.patreon.com/sethcohen" target="_blank" rel="noreferrer noopener" aria-label="Patreon">
                   <Patreon className="patreon" />
                 </a>
               </Tooltip>
