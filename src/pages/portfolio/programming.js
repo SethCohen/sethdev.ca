@@ -4,13 +4,12 @@ import {
   Box,
   Card,
   CardMedia,
-  Container,
   Grid,
   makeStyles,
   Typography
 } from "@material-ui/core";
-import Header from "../../components/header";
 import Seo from "../../components/seo";
+import Layout from "../../components/layout";
 
 const useStyles = makeStyles((theme) => ({
   cardGrid: {
@@ -39,10 +38,9 @@ export default function Portfolio({ data }) {
   const classes = useStyles();
 
   return (
-    <>
-      <Header siteTitle="// Seth Cohen" />
+    <Layout>
       <Seo title="Programming" />
-      <Container className={classes.cardGrid}>
+      <div className={classes.cardGrid}>
         <Grid
           container
           spacing={4}
@@ -76,8 +74,8 @@ export default function Portfolio({ data }) {
             </Grid>
           ))}
         </Grid>
-      </Container>
-    </>
+      </div>
+    </Layout>
   );
 }
 

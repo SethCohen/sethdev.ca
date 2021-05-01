@@ -1,9 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Header from "../../components/header";
 import Seo from "../../components/seo";
 import { default as ImageGallery } from '@browniebroke/gatsby-image-gallery'
-import { Container, makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
+import Layout from "../../components/layout";
 
 const useStyles = makeStyles((theme) => ({
   padding: {
@@ -22,11 +22,10 @@ export default function Gallery({ data }) {
   }))
 
   return (
-    <>
-      <Header siteTitle="// Seth Cohen" />
+    <Layout>
       <Seo title="Gallery" />
-      <Container className={classes.padding}><ImageGallery images={images} /></Container>
-    </>
+      <div className={classes.padding}><ImageGallery images={images} /></div>
+    </Layout>
   );
 
 }
