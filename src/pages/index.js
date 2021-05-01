@@ -4,6 +4,7 @@ import Youtube from "../assets/icons/youtube.svg";
 import Github from "../assets/icons/github.svg";
 import Email from "../assets/icons/email.svg";
 import Fiverr from "../assets/icons/fiverr.svg";
+import About from "../assets/icons/about.svg";
 import Seo from "../components/seo";
 import { Box, Container, Grid, Grow, Tooltip, Typography } from "@material-ui/core";
 import Header from "../components/header";
@@ -17,7 +18,7 @@ export default function Index() {
       <Header siteTitle="// Seth Cohen" />
       <Seo title="Home" />
       <Grow in={true}>
-        <Container>
+        <Container style={{ overflow: "hidden" }}>
           <Grid
             container
             spacing="3"
@@ -25,6 +26,13 @@ export default function Index() {
             alignItems="center"
             style={{ minHeight: "70vh" }}
           >
+            <Grid item>
+              <Tooltip title="About Me" aria-label="About Me">
+                <a href="#about-me" >
+                  <About className="about" />
+                </a>
+              </Tooltip>
+            </Grid>
             <Grid item>
               <Tooltip title="Email" aria-label="Email">
                 <a href="mailto:sethcohen.dev@gmail.com" aria-label="Mail">
@@ -64,13 +72,13 @@ export default function Index() {
             </Grid>
           </Grid>
           <Box style={{ minHeight: "30vh" }}></Box>
-          <Box style={{ minHeight: "70vh" }}>
-            <Typography align="center" variant="h4">
+          <Box style={{ minHeight: "80vh" }}>
+            <Typography align="center" variant="h4" id="about-me">
               Hi, I'm Seth! 🍵
               <br /><br />
               I'm a freelancer and passionate hobbyist for creating various apps & software as well as a bit of digital
-              art on the side. I like to follow a DIY ideology and learn new skills to accomplish whatever ideas I come
-              up with. I like to work on various digital art or app development projects.
+              art on the side. I like to follow a DIY ideology and learn new skills to accomplish whatever ideas that
+              pop into my head.
               <br /><br />
               My Tech Stack:
               <br />
@@ -82,7 +90,7 @@ export default function Index() {
               <br />
               Aseprite, Adobe Photoshop, Adobe Illustrator, Adobe Premiere Pro, Adobe After Effects,
               <br />
-              PyCharm, IntellIJ, Webstorm, Android Studio,
+              PyCharm, IntelliJ, Webstorm, Android Studio,
               <br />
               Firebase, SQLite
             </Typography>

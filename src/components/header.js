@@ -53,6 +53,13 @@ const Header = ({ siteTitle }) => (
           <CustomButton
             disableRipple
             component={Link}
+            to="/#about-me"
+          >
+            About
+          </CustomButton>
+          <CustomButton
+            disableRipple
+            component={Link}
             to="/support-me"
           >
             Support Me

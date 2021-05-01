@@ -1,5 +1,13 @@
-.email {
+.about {
     fill: url(#fill1);
+}
+.about:hover {
+    width: 105%;
+    height: auto;
+}
+
+.email {
+    fill: url(#fill2);
 }
 .email:hover {
     width: 105%;
@@ -7,7 +15,7 @@
 }
 
 .github {
-    fill: url(#fill2);
+    fill: url(#fill3);
 }
 .github:hover {
     width: 105%;
@@ -15,7 +23,7 @@
 }
 
 .playstore {
-    fill: url(#fill3);
+    fill: url(#fill4);
 }
 .playstore:hover {
     width: 105%;
@@ -23,7 +31,7 @@
 }
 
 .youtube {
-    fill: url(#fill4);
+    fill: url(#fill5);
 }
 .youtube:hover {
     width: 105%;
@@ -31,7 +39,7 @@
 }
 
 .fiverr {
-    fill: url(#fill5);
+    fill: url(#fill6);
 }
 .fiverr:hover {
     width: 105%;
