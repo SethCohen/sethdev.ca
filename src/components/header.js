@@ -31,7 +31,7 @@ const CustomTypography = withStyles({
 })(Typography);
 
 const Header = ({ siteTitle }) => (
-  <AppBar position="static" style={{ marginBottom: "2%" }}>
+  <AppBar position="sticky" style={{ marginBottom: "2%" }}>
     <Toolbar variant="dense">
       <Grid
         container
