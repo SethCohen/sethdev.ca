@@ -16,13 +16,13 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         '*::-webkit-scrollbar': {
-          width: '0.5em'
+          width: '1.5em'
         },
         '*::-webkit-scrollbar-track': {
-          '-webkit-box-shadow': 'inset 0 0 6px rgba(0,0,0,0.00)'
+          background: "#151819",
         },
         '*::-webkit-scrollbar-thumb': {
-          backgroundColor: 'rgba(19,21,22,1)',
+          backgroundColor: 'rgb(29,32,33)',
         },
         '*::-webkit-scrollbar-thumb:hover': {
           backgroundColor: 'rgb(39,42,43)',

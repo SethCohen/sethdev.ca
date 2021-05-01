@@ -73,9 +73,8 @@ export default function Index() {
         <Typography align="center" variant="h4" id="about-me">
           Hi, I'm Seth! <span role="img" aria-label="tea-emoji">🍵</span>
           <br /><br />
-          I'm a freelancer and passionate hobbyist for creating various apps & software as well as a bit of digital
-          art on the side. I like to follow a DIY ideology and learn new skills to accomplish whatever ideas that
-          pop into my head.
+          I'm a freelancer and hobbyist who's passionate towards creating various apps, software, digital art, and graphic
+          designs. I love to learn any new skills to help accomplish whatever ideas & goals that pop into my head.
           <br /><br />
           My Tech Stack:
           <br />
