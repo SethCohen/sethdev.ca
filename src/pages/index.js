@@ -54,8 +54,8 @@ export default function Index() {
               </Tooltip>
             </Grid>
             <Grid item>
-              <Tooltip title="Fiverr" aria-label="Fiverr">
-                <a href="https://www.fiverr.com/" target="_blank" rel="noreferrer noopener" aria-label="Fiverr">
+              <Tooltip title="Fiverr (WIP)" aria-label="Fiverr">
+                <a href="#" target="_blank" rel="noreferrer noopener" aria-label="Fiverr">
                   <Fiverr className="fiverr" />
                 </a>
               </Tooltip>
