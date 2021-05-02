@@ -98,6 +98,7 @@ module.exports = {
         ]
       }
     },
+    `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-client-side-redirect`,
     `gatsby-plugin-offline`
   ]

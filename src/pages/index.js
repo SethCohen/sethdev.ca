@@ -9,7 +9,7 @@ import Seo from "../components/seo";
 import { Box, Grid, Tooltip, Typography } from "@material-ui/core";
 import "../components/svgStyle.css";
 import Layout from "../components/layout";
-
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 export default function Index() {
 
@@ -25,9 +25,19 @@ export default function Index() {
       >
         <Grid item>
           <Tooltip title="About Me" aria-label="About Me">
-            <a href="#about-me">
-              <About className="about" />
-            </a>
+            <button
+              aria-label="About Me"
+              onClick={() => scrollTo('#about-me')}
+              style={{
+                backgroundColor: "transparent",
+                border: "none",
+                cursor: "pointer",
+                margin: 0,
+                padding: 0,
+              }}
+            >
+              <About className="about"/>
+            </button>
           </Tooltip>
         </Grid>
         <Grid item>

@@ -39,6 +39,7 @@ export const query = graphql`
             thumb: gatsbyImageData(
               width: 270
               height: 270
+              quality: 100
               placeholder: BLURRED
             )
             full: gatsbyImageData(
