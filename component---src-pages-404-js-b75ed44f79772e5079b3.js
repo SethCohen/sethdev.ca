@@ -1,2 +1,0 @@
-(self.webpackChunksethdev=self.webpackChunksethdev||[]).push([[883],{9946:function(e,t,n){"use strict";n.r(t);var l=n(7294),u=n(7609),a=n(3715),r=n(4006);t.default=function(){return l.createElement(l.Fragment,null,l.createElement(r.Z,{siteTitle:"// Seth Cohen"}),l.createElement(a.Z,null,l.createElement(u.Z,{title:"404: Not found"}),l.createElement("h1",null,"404: Not Found"),l.createElement("p",null,"You just hit a route that doesn't exist... ")))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-b75ed44f79772e5079b3.js.map
