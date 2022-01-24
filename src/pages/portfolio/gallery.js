@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Seo from "../../components/seo";
 import { default as ImageGallery } from '@browniebroke/gatsby-image-gallery'
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from "@mui/styles";
 import Layout from "../../components/layout";
 
 const useStyles = makeStyles((theme) => ({

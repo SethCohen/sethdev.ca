@@ -7,7 +7,7 @@ import {
   Grid,
   makeStyles,
   Typography
-} from "@material-ui/core";
+} from "@mui/material";
 import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 

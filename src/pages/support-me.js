@@ -5,7 +5,7 @@ import GithubSponsor from "../assets/icons/githubsponsor.svg";
 import Kofi from "../assets/icons/kofi.svg";
 import Paypal from "../assets/icons/paypal.svg";
 import Seo from "../components/seo";
-import { Grid, Tooltip, Typography } from "@material-ui/core";
+import { Grid, Tooltip, Typography } from "@mui/material";
 import "../components/svgStyle.css";
 import Layout from "../components/layout";
 
@@ -27,8 +27,8 @@ export default function Index() {
 
       <Grid
         container
-        spacing="3"
-        justify="center"
+        spacing={3}
+        justifyContent="center"
         alignItems="center"
         style={{ minHeight: "40vh" }}
       >

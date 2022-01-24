@@ -1,7 +1,8 @@
 import * as React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { AppBar, Box, Grid, withStyles, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Box, Grid, Toolbar, Typography } from "@mui/material";
+import { withStyles } from "@mui/styles";
 import { Button } from "gatsby-theme-material-ui";
 
 const CustomButton = withStyles({
@@ -35,7 +36,7 @@ const Header = ({ siteTitle }) => (
     <Toolbar variant="dense">
       <Grid
         container
-        justify="space-between"
+        justifyContent="space-between"
         alignItems="center"
       >
         <CustomTypography variant="h3">

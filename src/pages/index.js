@@ -6,7 +6,7 @@ import Email from "../assets/icons/email.svg";
 import Fiverr from "../assets/icons/fiverr.svg";
 import About from "../assets/icons/about.svg";
 import Seo from "../components/seo";
-import { Box, Grid, Tooltip, Typography } from "@material-ui/core";
+import { Box, Grid, Tooltip, Typography } from "@mui/material";
 import "../components/svgStyle.css";
 import Layout from "../components/layout";
 import scrollTo from 'gatsby-plugin-smoothscroll';
@@ -18,8 +18,8 @@ export default function Index() {
       <Seo title="Home" />
       <Grid
         container
-        spacing="3"
-        justify="center"
+        spacing={3}
+        justifyContent="center"
         alignItems="center"
         style={{ minHeight: "70vh" }}
       >
