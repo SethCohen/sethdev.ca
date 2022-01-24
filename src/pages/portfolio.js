@@ -10,6 +10,7 @@ import {
 import { makeStyles } from "@mui/styles";
 import Seo from "../components/seo";
 import Layout from "../components/layout";
+import "../components/svgStyle.css";
 
 const useStyles = makeStyles((theme) => ({
     cardGrid: {

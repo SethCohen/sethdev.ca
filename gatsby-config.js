@@ -43,7 +43,13 @@ module.exports = {
         }
       }
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        gfm: true,
+        plugins: [`gatsby-remark-autolink-headers`],
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     {
       resolve: `gatsby-plugin-feed`,

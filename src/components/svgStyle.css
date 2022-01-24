@@ -86,3 +86,13 @@
     height: auto;
 }
 
+a.anchor {
+    fill: white;
+}
+
+a {
+    color: #73A7F4;
+}
+a:hover {
+    color: #4069B2;
+}
