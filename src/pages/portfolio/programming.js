@@ -5,9 +5,9 @@ import {
   Card,
   CardMedia,
   Grid,
-  makeStyles,
   Typography
 } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import Seo from "../../components/seo";
 import Layout from "../../components/layout";
 
