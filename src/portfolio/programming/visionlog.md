@@ -1,6 +1,6 @@
 ---
 title: "Vision Log"
-date: "2021-04-25"
+date: "2018-08-30"
 image: https://i.imgur.com/AZVmOjK.png
 redirect: https://play.google.com/store/apps/details?id=seth.cohen.visionlog
 ---

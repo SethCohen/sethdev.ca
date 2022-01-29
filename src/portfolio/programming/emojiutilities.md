@@ -1,6 +1,6 @@
 ---
 title: "Emoji Utilities"
-date: "2021-04-24"
+date: "2020-09-20"
 image: https://i.imgur.com/vGKBtjD.png
 redirect: https://github.com/SethCohen/EmojiUtilities
 ---

@@ -1,6 +1,6 @@
 ---
 title: "SethDev.ca"
-date: "2021-04-30"
+date: "2021-03-07"
 image: https://i.imgur.com/viXYygQ.png
 redirect: https://github.com/SethCohen/sethdev.ca
 ---
