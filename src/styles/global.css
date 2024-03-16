@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div {
+  color: #fff;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; visibility: visible; }
+}
+
+.typewriter {
+  overflow: hidden;
+  animation-name: typing;
+  animation-duration: 1s;
+  animation-timing-function: steps(200, end);
+  animation-iteration-count: 1;
+}
+
+.typewriter:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.typewriter:nth-child(2) {
+  visibility: hidden;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+
+.icon-button {
+  transition: fill 0.5s;
+}
+
+.icon-button:hover {
+  fill: gold;
+}
