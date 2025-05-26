@@ -1,5 +1,0 @@
-{
-    "componentChunkName": "component---src-templates-blog-post-js",
-    "path": "/portfolio/programming/emojiutilities/",
-    "result": {"data":{"markdownRemark":{"html":"<p>Redirecting you to <a href=\"https://github.com/SethCohen/EmojiUtilities\">https://github.com/SethCohen/EmojiUtilities</a>\n<br/>\nIf it doesn't work within 5 seconds, please click the link above.</p>","frontmatter":{"title":"Emoji Utilities"}}},"pageContext":{"slug":"/portfolio/programming/emojiutilities/"}},
-    "staticQueryHashes": ["63159454"]}
