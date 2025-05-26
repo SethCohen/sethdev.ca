@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, type JSX } from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Mail, Layers } from 'lucide-react';
 import Navbar from './components/Navbar'
@@ -266,6 +266,59 @@ const Support: React.FC = () => {
 	);
 };
 
+const techStacks: { [key: string]: string[] } = {
+	'Vision Log': ['Flutter', 'Dart', 'Android'],
+	'KF2 ESMA': ['Node.js', 'JavaScript'],
+	'Emoji Utilities': ['Node.js', 'Discord.js'],
+	'SethDev.ca': ['React', 'Tailwind CSS', 'TypeScript'],
+	'Github Releases To Discord': ['GitHub Actions', 'Node.js'],
+	'ASLearner': ['Flutter', 'Dart'],
+	'WiktionaryViz': ['React', 'D3.js', 'TypeScript'],
+};
+
+const techIcons: { [key: string]: JSX.Element } = {
+	Flutter: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" className="w-6 h-6" />,
+	Dart: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" className="w-6 h-6" />,
+	Android: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" className="w-6 h-6" />,
+	'Node.js': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-6 h-6" />,
+	JavaScript: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-6 h-6" />,
+	'React': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-6 h-6" />,
+	'Tailwind CSS': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" className="w-6 h-6" />,
+	TypeScript: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-6 h-6" />,
+	'Discord.js': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" alt="Discord.js" className="w-6 h-6" />,
+	'D3.js': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg" alt="D3.js" className="w-6 h-6" />,
+	'GitHub Actions': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" className="w-6 h-6" />,
+};
+
+const ParallaxBackground: React.FC = () => (
+	<div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+		<motion.div
+			className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gold-500/10 via-gray-900/60 to-gold-600/10"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 1 }}
+		/>
+		<motion.div
+			className="absolute rounded-full bg-gold-500/20 blur-2xl"
+			style={{ width: 400, height: 400, top: '10%', left: '-10%' }}
+			animate={{ x: [0, 60, 0], y: [0, 40, 0] }}
+			transition={{ repeat: Infinity, duration: 18, ease: 'easeInOut' }}
+		/>
+		<motion.div
+			className="absolute rounded-full bg-gold-600/20 blur-2xl"
+			style={{ width: 300, height: 300, bottom: '10%', right: '-8%' }}
+			animate={{ x: [0, -40, 0], y: [0, -30, 0] }}
+			transition={{ repeat: Infinity, duration: 22, ease: 'easeInOut' }}
+		/>
+		<motion.div
+			className="absolute rounded-full bg-gold-400/10 blur-3xl"
+			style={{ width: 500, height: 500, top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+			animate={{ scale: [1, 1.1, 1] }}
+			transition={{ repeat: Infinity, duration: 30, ease: 'easeInOut' }}
+		/>
+	</div>
+);
+
 const Portfolio: React.FC = () => {
 	const projects = [
 		{ 
@@ -320,85 +373,110 @@ const Portfolio: React.FC = () => {
 	];
 
 	const [loadedImages, setLoadedImages] = useState<{ [key: string]: boolean }>({});
+	const [activeIndex, setActiveIndex] = useState(0);
 
 	const handleImageLoad = (title: string) => {
 		setLoadedImages((prev) => ({ ...prev, [title]: true }));
 	};
 
+	const containerRef = React.useRef<HTMLDivElement>(null);
+
+	useEffect(() => {
+		const onScroll = () => {
+			const scrollTop = window.scrollY || window.pageYOffset;
+			const viewportHeight = window.innerHeight;
+			const newIndex = Math.round(scrollTop / (viewportHeight * 0.7));
+			setActiveIndex(newIndex);
+		};
+
+		window.addEventListener('scroll', onScroll, { passive: true });
+		return () => window.removeEventListener('scroll', onScroll);
+	}, []);
+
 	return (
 		<section
 			id="portfolio"
 			aria-label="Portfolio projects gallery"
-			className="py-16 bg-gray-900 text-gold-400 px-6"
+			className="relative py-16 bg-gray-900 text-gold-400 px-0 min-h-screen flex flex-col justify-center items-center overflow-visible"
 		>
+			<ParallaxBackground />
 			<motion.h2
 				initial={{ opacity: 0, y: 20 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.8 }}
-				className="text-3xl font-bold mb-12 text-center"
+				className="text-3xl font-bold mb-8 text-center z-10"
 			>
 				Portfolio
 			</motion.h2>
-			<motion.div
-				className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"
-				initial={{ opacity: 0 }}
-				whileInView={{ opacity: 1 }}
-				viewport={{ once: true }}
-				transition={{ duration: 1 }}
+			<div
+				ref={containerRef}
+				className="relative w-full flex flex-col"
 			>
-				{projects.map(({ title, description, link, date, thumbnail }) => (
-					<motion.a
-						key={title}
-						href={link}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="group block bg-gray-800 rounded-xl overflow-hidden transition-all duration-300 cursor-pointer focus:outline-none focus:ring-2 focus:ring-gold-500"
-						whileHover={{ scale: 1.04 }}
-						whileFocus={{ scale: 1.04 }}
-						tabIndex={0}
-						aria-label={`View project: ${title}`}
-					>
-						<div className="relative aspect-video w-full bg-gray-700 flex items-center justify-center">
-							{thumbnail ? (
-								<>
-									<img
-										src={thumbnail}
-										alt={`${title} thumbnail`}
-										className={`object-cover w-full h-full transition-opacity duration-500 ${loadedImages[title] ? 'opacity-100' : 'opacity-0'}`}
-										onLoad={() => handleImageLoad(title)}
-										loading="lazy"
-									/>
-									{!loadedImages[title] && (
-										<div className="absolute inset-0 flex items-center justify-center bg-gray-700 animate-pulse">
+				{projects.map(({ title, description, link, date, thumbnail }, index) => {
+					const isActive = index === activeIndex;
+					return (
+						<motion.div
+							key={title}
+							className={`sticky top-[15vh] flex-shrink-0 h-[70vh] max-w-3xl w-full mx-auto z-${isActive ? 50 : 10 + index}`}
+							initial={{ opacity: 0, scale: 0.9, x: 20 }}
+							animate={{ opacity: isActive ? 1 : 0.6, scale: isActive ? 1 : 0.9, x: isActive ? 0 : 20, zIndex: isActive ? 50 : 10 + index }}
+							transition={{ duration: 0.5 }}
+						>
+							<div
+								className={`group relative bg-gray-800/90 rounded-3xl shadow-2xl border border-gold-500/30 p-8 w-full h-full flex flex-col justify-between items-center transition-transform duration-300 hover:scale-105 hover:shadow-gold-500/40 hover:border-gold-500/60 focus-within:scale-105 focus-within:shadow-gold-500/40 focus-within:border-gold-500/60 ${isActive ? 'ring-4 ring-gold-500/50' : ''}`}
+								tabIndex={0}
+							>
+								<div className="w-full flex-1 flex flex-col items-center justify-center">
+									<div className="relative aspect-video w-full max-w-lg bg-gray-700 rounded-xl overflow-hidden mb-6 flex items-center justify-center">
+										{thumbnail ? (
+											<>
+												<img
+													src={thumbnail}
+													alt={`${title} thumbnail`}
+													className={`object-cover w-full h-full transition-opacity duration-500 ${loadedImages[title] ? 'opacity-100' : 'opacity-0'}`}
+													onLoad={() => handleImageLoad(title)}
+													loading="lazy"
+												/>
+												{!loadedImages[title] && (
+													<div className="absolute inset-0 flex items-center justify-center bg-gray-700 animate-pulse">
+														<div className="w-16 h-16 rounded bg-gray-600" />
+													</div>
+												)}
+										</>
+									) : (
+										<div className="w-full h-full flex items-center justify-center bg-gray-700 animate-pulse">
 											<div className="w-16 h-16 rounded bg-gray-600" />
 										</div>
 									)}
-								</>
-							) : (
-								<div className="w-full h-full flex items-center justify-center bg-gray-700 animate-pulse">
-									<div className="w-16 h-16 rounded bg-gray-600" />
 								</div>
-							)}
-						</div>
-						<div className="p-6 flex flex-col h-full">
-							<h3 className="text-xl font-semibold mb-1 text-gold-400">{title}</h3>
-							<p className="text-xs text-gold-600 mb-2">{new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</p>
-							{/* Description hidden by default, shown on hover/focus */}
-							<div
-								className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 group-focus:max-h-40 group-focus:opacity-100 transition-all duration-300 text-sm text-gold-200 mb-4"
-								aria-hidden="true"
+								<h3 className="text-2xl font-bold mb-2 text-gold-400 text-center">{title}</h3>
+								<p className="text-xs text-gold-600 mb-2 text-center">{new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</p>
+								<p className="text-base text-gold-200 mb-4 text-center line-clamp-4">{description}</p>
+								<div className="flex flex-wrap justify-center gap-3 mb-4">
+									{(techStacks[title] || []).map((tech) => (
+										<span key={tech} className="inline-flex items-center gap-1 px-2 py-1 bg-gray-900/60 rounded text-xs font-medium text-gold-400 border border-gold-500/20">
+											{techIcons[tech] || tech}
+											<span>{tech}</span>
+										</span>
+									))}
+								</div>
+							</div>
+							<a
+								href={link}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="mt-4 px-6 py-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-bold rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 flex items-center gap-2 text-lg group/button"
+								aria-label={`View project: ${title}`}
 							>
-								{description}
-							</div>
-							<div className="mt-auto flex items-center gap-2 text-gold-400">
-								<ExternalLink size={16} aria-hidden="true" />
-								<span className="underline">Visit</span>
-							</div>
+								<ExternalLink size={20} aria-hidden="true" />
+								<span>View Repo</span>
+							</a>
 						</div>
-					</motion.a>
-				))}
-			</motion.div>
+					</motion.div>
+					);
+				})}
+			</div>
 		</section>
 	);
 };
