@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Layers, Mail } from 'lucide-react';
+import { Layers, Mail, User } from 'lucide-react';
 import { useTypewriter } from '@/hooks/useTypewriter';
 import { useTypewriterOnce } from '@/hooks/useTypewriterOnce';
+import { siGithub, siYoutube } from 'simple-icons/icons';
+import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
 
 /**
  * Hero section with animated heading and typewriter subtitle.
@@ -62,26 +64,88 @@ const Hero: React.FC = () => {
         transition={{ delay: 1.5, duration: 1 }}
         className="mt-8 flex justify-center gap-6"
       >
-        <a
-          href="#portfolio"
-          className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
-          aria-label="View Portfolio"
-        >
-          <Layers size={24} aria-hidden="true" />
-          <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-gold-400 opacity-0 pointer-events-none transition-opacity group-hover:opacity-100 group-focus:opacity-100 z-10">
-            View Portfolio
-          </span>
-        </a>
-        <a
-          href="#contact"
-          className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
-          aria-label="Contact Me"
-        >
-          <Mail size={24} aria-hidden="true" />
-          <span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-gold-400 opacity-0 pointer-events-none transition-opacity group-hover:opacity-100 group-focus:opacity-100 z-10">
-            Contact Me
-          </span>
-        </a>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href="#portfolio"
+              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              aria-label="View Portfolio"
+            >
+              <Layers size={36} aria-hidden="true" />
+            </a>
+          </TooltipTrigger>
+          <TooltipContent>View Portfolio</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href="#contact"
+              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              aria-label="Contact Me"
+            >
+              <Mail size={36} aria-hidden="true" />
+            </a>
+          </TooltipTrigger>
+          <TooltipContent>Contact Me</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href="#about-me"
+              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              aria-label="About Me"
+            >
+              <User size={36} aria-hidden="true" />
+            </a>
+          </TooltipTrigger>
+          <TooltipContent>About Me</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href="https://github.com/sethcohen"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              aria-label="Github"
+            >
+              <svg
+                width={36}
+                height={36}
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                className="inline fill-current text-gold-500 group-hover:text-gold-600"
+              >
+                <path d={siGithub.path} />
+              </svg>
+            </a>
+          </TooltipTrigger>
+          <TooltipContent>Github</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href="https://youtube.com/@sethcohen2185"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              aria-label="Youtube"
+            >
+              <svg
+                width={36}
+                height={36}
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                className="inline fill-current text-gold-500 group-hover:text-gold-600"
+              >
+                <path d={siYoutube.path} />
+              </svg>
+            </a>
+          </TooltipTrigger>
+          <TooltipContent>Youtube</TooltipContent>
+        </Tooltip>
       </motion.div>
     </section>
   );

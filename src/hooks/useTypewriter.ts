@@ -9,8 +9,8 @@ import { useState, useEffect } from 'react';
  */
 export function useTypewriter(
   words: string[],
-  typingSpeed = 100,
-  deletingSpeed = 50,
+  typingSpeed = 75,
+  deletingSpeed = 25,
   delay = 1500
 ) {
   const [text, setText] = useState('');

@@ -8,31 +8,31 @@ import { siKofi, siGithubsponsors, siPaypal, siPatreon, siBuymeacoffee } from 's
  */
 const supportLinks = [
   {
-    href: 'https://ko-fi.com/sethdev',
+    href: 'https://ko-fi.com/sethcohen',
     label: 'Ko-fi',
     icon: siKofi,
     color: `#${siKofi.hex}`,
   },
   {
-    href: 'https://github.com/sponsors/sethdev',
+    href: 'https://github.com/sponsors/SethCohen',
     label: 'Github Sponsor',
     icon: siGithubsponsors,
     color: `#${siGithubsponsors.hex}`,
   },
   {
-    href: 'https://paypal.me/sethdev',
+    href: 'https://www.paypal.com/paypalme/SethCohenDev',
     label: 'Paypal',
     icon: siPaypal,
     color: `#${siPaypal.hex}`,
   },
   {
-    href: 'https://patreon.com/sethdev',
+    href: 'https://www.patreon.com/sethcohen',
     label: 'Patreon',
     icon: siPatreon,
     color: '#ffffff',
   },
   {
-    href: 'https://www.buymeacoffee.com/sethdev',
+    href: 'https://buymeacoffee.com/sethcohen',
     label: 'BuyMeACoffee',
     icon: siBuymeacoffee,
     color: `#${siBuymeacoffee.hex}`,
