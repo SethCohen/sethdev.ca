@@ -1,12 +1,21 @@
-import React, { useEffect, useState, type JSX } from 'react';
+import React, { useEffect, useState, } from 'react';
 import { motion } from 'framer-motion';
-import { ExternalLink, Mail, Layers } from 'lucide-react';
+import { Mail, Layers } from 'lucide-react';
 import Navbar from './components/Navbar'
 import { siKofi } from 'simple-icons/icons';
 import { siGithubsponsors } from 'simple-icons/icons';
 import { siPaypal } from 'simple-icons/icons';
 import { siPatreon } from 'simple-icons/icons';
 import { siBuymeacoffee } from 'simple-icons/icons';
+import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
+
+import {
+	Card,
+	CardContent,
+	CardDescription,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card"
 
 // Custom hook for typewriter effect
 function useTypewriter(words: string[], typingSpeed = 100, deletingSpeed = 50, delay = 1500) {
@@ -152,142 +161,139 @@ const Support: React.FC = () => {
 				viewport={{ once: true }}
 				transition={{ duration: 0.5 }}
 			>
-				<a
-					href="https://ko-fi.com/sethdev"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
-					aria-label="Ko-fi"
-				>
-					<svg
-						width={20}
-						height={20}
-						viewBox="0 0 24 24"
-						fill={`#${siKofi.hex}`}
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						className="inline"
-					>
-						<path d={siKofi.path} />
-					</svg>
-					<span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-gold-400 opacity-0 pointer-events-none transition-opacity group-hover:opacity-100 group-focus:opacity-100 z-10">
+				<Tooltip>
+					<TooltipTrigger asChild>
+						<a
+							href="https://ko-fi.com/sethdev"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
+							aria-label="Ko-fi"
+						>
+							<svg
+								width={20}
+								height={20}
+								viewBox="0 0 24 24"
+								fill={`#${siKofi.hex}`}
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								className="inline"
+							>
+								<path d={siKofi.path} />
+							</svg>
+						</a>
+					</TooltipTrigger>
+					<TooltipContent>
 						Ko-fi
-					</span>
-				</a>
-				<a
-					href="https://github.com/sponsors/sethdev"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
-					aria-label="Github Sponsor"
-				>
-					<svg
-						width={20}
-						height={20}
-						viewBox="0 0 24 24"
-						fill={`#${siGithubsponsors.hex}`}
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						className="inline"
-					>
-						<path d={siGithubsponsors.path} />
-					</svg>
-					<span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-gold-400 opacity-0 pointer-events-none transition-opacity group-hover:opacity-100 group-focus:opacity-100 z-10">
+					</TooltipContent>
+				</Tooltip>
+				<Tooltip>
+					<TooltipTrigger asChild>
+						<a
+							href="https://github.com/sponsors/sethdev"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
+							aria-label="Github Sponsor"
+						>
+							<svg
+								width={20}
+								height={20}
+								viewBox="0 0 24 24"
+								fill={`#${siGithubsponsors.hex}`}
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								className="inline"
+							>
+								<path d={siGithubsponsors.path} />
+							</svg>
+						</a>
+					</TooltipTrigger>
+					<TooltipContent>
 						Github Sponsor
-					</span>
-				</a>
-				<a
-					href="https://paypal.me/sethdev"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
-					aria-label="Paypal"
-				>
-					<svg
-						width={20}
-						height={20}
-						viewBox="0 0 24 24"
-						fill={`#${siPaypal.hex}`}
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						className="inline"
-					>
-						<path d={siPaypal.path} />
-					</svg>
-					<span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-gold-400 opacity-0 pointer-events-none transition-opacity group-hover:opacity-100 group-focus:opacity-100 z-10">Paypal
-					</span>
-				</a>
-				<a
-					href="https://patreon.com/sethdev"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
-					aria-label="Patreon"
-				>
-					<svg
-						width={20}
-						height={20}
-						viewBox="0 0 24 24"
-						fill={`#ffffff`}
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						className="inline"
-					>
-						<path d={siPatreon.path} />
-					</svg>
-					<span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-gold-400 opacity-0 pointer-events-none transition-opacity group-hover:opacity-100 group-focus:opacity-100 z-10">
+					</TooltipContent>
+				</Tooltip>
+				<Tooltip>
+					<TooltipTrigger asChild>
+						<a
+							href="https://paypal.me/sethdev"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
+							aria-label="Paypal"
+						>
+							<svg
+								width={20}
+								height={20}
+								viewBox="0 0 24 24"
+								fill={`#${siPaypal.hex}`}
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								className="inline"
+							>
+								<path d={siPaypal.path} />
+							</svg>
+						</a>
+					</TooltipTrigger>
+					<TooltipContent>
+						Paypal
+					</TooltipContent>
+				</Tooltip>
+				<Tooltip>
+					<TooltipTrigger asChild>
+						<a
+							href="https://patreon.com/sethdev"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
+							aria-label="Patreon"
+						>
+							<svg
+								width={20}
+								height={20}
+								viewBox="0 0 24 24"
+								fill={`#ffffff`}
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								className="inline"
+							>
+								<path d={siPatreon.path} />
+							</svg>
+						</a>
+					</TooltipTrigger>
+					<TooltipContent>
 						Patreon
-					</span>
-				</a>
-				<a
-					href="https://www.buymeacoffee.com/sethdev"
-					target="_blank"
-					rel="noopener noreferrer"
-					className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
-					aria-label="BuyMeACoffee"
-				>
-					<svg
-						width={20}
-						height={20}
-						viewBox="0 0 24 24"
-						fill={`#${siBuymeacoffee.hex}`}
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						className="inline"
-					>
-						<path d={siBuymeacoffee.path} />
-					</svg>
-					<span className="absolute top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded bg-gray-800 px-2 py-1 text-xs text-gold-400 opacity-0 pointer-events-none transition-opacity group-hover:opacity-100 group-focus:opacity-100 z-10">
+					</TooltipContent>
+				</Tooltip>
+				<Tooltip>
+					<TooltipTrigger asChild>
+						<a
+							href="https://www.buymeacoffee.com/sethdev"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
+							aria-label="BuyMeACoffee"
+						>
+							<svg
+								width={20}
+								height={20}
+								viewBox="0 0 24 24"
+								fill={`#${siBuymeacoffee.hex}`}
+								aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg"
+								className="inline"
+							>
+								<path d={siBuymeacoffee.path} />
+							</svg>
+						</a>
+					</TooltipTrigger>
+					<TooltipContent>
 						BuyMeACoffee
-					</span>
-				</a>
+					</TooltipContent>
+				</Tooltip>
 			</motion.div>
 		</section>
 	);
-};
-
-const techStacks: { [key: string]: string[] } = {
-	'Vision Log': ['Flutter', 'Dart', 'Android'],
-	'KF2 ESMA': ['Node.js', 'JavaScript'],
-	'Emoji Utilities': ['Node.js', 'Discord.js'],
-	'SethDev.ca': ['React', 'Tailwind CSS', 'TypeScript'],
-	'Github Releases To Discord': ['GitHub Actions', 'Node.js'],
-	'ASLearner': ['Flutter', 'Dart'],
-	'WiktionaryViz': ['React', 'D3.js', 'TypeScript'],
-};
-
-const techIcons: { [key: string]: JSX.Element } = {
-	Flutter: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" className="w-6 h-6" />,
-	Dart: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart" className="w-6 h-6" />,
-	Android: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg" alt="Android" className="w-6 h-6" />,
-	'Node.js': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-6 h-6" />,
-	JavaScript: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-6 h-6" />,
-	'React': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-6 h-6" />,
-	'Tailwind CSS': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind CSS" className="w-6 h-6" />,
-	TypeScript: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-6 h-6" />,
-	'Discord.js': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg" alt="Discord.js" className="w-6 h-6" />,
-	'D3.js': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/d3js/d3js-original.svg" alt="D3.js" className="w-6 h-6" />,
-	'GitHub Actions': <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" className="w-6 h-6" />,
 };
 
 const ParallaxBackground: React.FC = () => (
@@ -321,12 +327,12 @@ const ParallaxBackground: React.FC = () => (
 
 const Portfolio: React.FC = () => {
 	const projects = [
-		{ 
+		{
 			title: 'Vision Log',
 			description: 'A Flutter Android app for recording and managing dreams. With a focus on intuitive and efficient design, the app has a clean minimalistic feel with no sense of lack of functionality.',
 			link: 'https://github.com/SethCohen/VisionLog',
 			date: '2018-08-30',
-			thumbnail: 'https://placehold.co/500.png', 
+			thumbnail: 'https://placehold.co/500.png',
 		},
 		{
 			title: 'KF2 ESMA',
@@ -347,37 +353,32 @@ const Portfolio: React.FC = () => {
 			description: 'Personal portfolio website showcasing my projects, skills, and interests. Built with React and Tailwind CSS for a modern, responsive design.',
 			link: 'https://github.com/SethCohen/sethdev.ca',
 			date: '2021-03-07',
-			thumbnail: 'https://placehold.co/500.png', 
+			thumbnail: 'https://placehold.co/500.png',
 		},
 		{
 			title: 'Github Releases To Discord',
 			description: 'A GitHub Action that sends a stylized Discord webhook containing the description of a GitHub Release to a specified Discord channel. It formats the description to improve readability and includes various configuration options to customize the message.',
 			link: 'https://github.com/SethCohen/github-releases-to-discord',
 			date: '2022-08-23',
-			thumbnail: 'https://placehold.co/500.png', 
+			thumbnail: 'https://placehold.co/500.png',
 		},
 		{
 			title: 'ASLearner',
 			description: 'An American Sign Language Learning app. It provides a simple and intuitive interface for learning ASL through interactive lessons, quizzes, and practice exercises. The app is designed to be accessible and user-friendly, making it easy for anyone to start learning ASL.',
 			link: 'https://github.com/SethCohen/ASLearner',
 			date: '2022-09-23',
-			thumbnail: 'https://placehold.co/500.png', 
+			thumbnail: 'https://placehold.co/500.png',
 		},
 		{
 			title: 'WiktionaryViz',
 			description: 'An explorative visual analytics tool for linguistics based upon Wiktionary data. It allows users to explore and analyze linguistic data in an interactive way, providing insights into word usage, definitions, and relationships.',
 			link: 'https://github.com/vialab/WiktionaryViz',
 			date: '2024-11-20',
-			thumbnail: 'https://placehold.co/500.png', 
+			thumbnail: 'https://placehold.co/500.png',
 		},
 	];
 
-	const [loadedImages, setLoadedImages] = useState<{ [key: string]: boolean }>({});
 	const [activeIndex, setActiveIndex] = useState(0);
-
-	const handleImageLoad = (title: string) => {
-		setLoadedImages((prev) => ({ ...prev, [title]: true }));
-	};
 
 	const containerRef = React.useRef<HTMLDivElement>(null);
 
@@ -397,7 +398,7 @@ const Portfolio: React.FC = () => {
 		<section
 			id="portfolio"
 			aria-label="Portfolio projects gallery"
-			className="relative py-16 bg-gray-900 text-gold-400 px-0 min-h-screen flex flex-col justify-center items-center overflow-visible"
+			className="relative py-16 px-0 min-h-screen flex flex-col justify-center items-center overflow-visible"
 		>
 			<ParallaxBackground />
 			<motion.h2
@@ -418,62 +419,43 @@ const Portfolio: React.FC = () => {
 					return (
 						<motion.div
 							key={title}
-							className={`sticky top-[15vh] flex-shrink-0 h-[70vh] max-w-3xl w-full mx-auto z-${isActive ? 50 : 10 + index}`}
-							initial={{ opacity: 0, scale: 0.9, x: 20 }}
-							animate={{ opacity: isActive ? 1 : 0.6, scale: isActive ? 1 : 0.9, x: isActive ? 0 : 20, zIndex: isActive ? 50 : 10 + index }}
+							className={`sticky top-[15vh] flex-shrink-0 max-w-3xl w-full mx-auto ${
+								isActive
+									? 'pointer-events-auto z-50'
+									: 'pointer-events-none z-10'
+							}`}
+							initial={{ opacity: 0, scale: 0.95, y: 20 }}
+							animate={{
+								opacity: 1,
+								scale: isActive ? 1 : 0.95,
+								y: isActive ? 0 : 20,
+							}}
 							transition={{ duration: 0.5 }}
 						>
-							<div
-								className={`group relative bg-gray-800/90 rounded-3xl shadow-2xl border border-gold-500/30 p-8 w-full h-full flex flex-col justify-between items-center transition-transform duration-300 hover:scale-105 hover:shadow-gold-500/40 hover:border-gold-500/60 focus-within:scale-105 focus-within:shadow-gold-500/40 focus-within:border-gold-500/60 ${isActive ? 'ring-4 ring-gold-500/50' : ''}`}
-								tabIndex={0}
-							>
-								<div className="w-full flex-1 flex flex-col items-center justify-center">
-									<div className="relative aspect-video w-full max-w-lg bg-gray-700 rounded-xl overflow-hidden mb-6 flex items-center justify-center">
-										{thumbnail ? (
-											<>
-												<img
-													src={thumbnail}
-													alt={`${title} thumbnail`}
-													className={`object-cover w-full h-full transition-opacity duration-500 ${loadedImages[title] ? 'opacity-100' : 'opacity-0'}`}
-													onLoad={() => handleImageLoad(title)}
-													loading="lazy"
-												/>
-												{!loadedImages[title] && (
-													<div className="absolute inset-0 flex items-center justify-center bg-gray-700 animate-pulse">
-														<div className="w-16 h-16 rounded bg-gray-600" />
-													</div>
-												)}
-										</>
-									) : (
-										<div className="w-full h-full flex items-center justify-center bg-gray-700 animate-pulse">
-											<div className="w-16 h-16 rounded bg-gray-600" />
-										</div>
-									)}
-								</div>
-								<h3 className="text-2xl font-bold mb-2 text-gold-400 text-center">{title}</h3>
-								<p className="text-xs text-gold-600 mb-2 text-center">{new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}</p>
-								<p className="text-base text-gold-200 mb-4 text-center line-clamp-4">{description}</p>
-								<div className="flex flex-wrap justify-center gap-3 mb-4">
-									{(techStacks[title] || []).map((tech) => (
-										<span key={tech} className="inline-flex items-center gap-1 px-2 py-1 bg-gray-900/60 rounded text-xs font-medium text-gold-400 border border-gold-500/20">
-											{techIcons[tech] || tech}
-											<span>{tech}</span>
-										</span>
-									))}
-								</div>
-							</div>
 							<a
 								href={link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="mt-4 px-6 py-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-bold rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 flex items-center gap-2 text-lg group/button"
-								aria-label={`View project: ${title}`}
+								className="block focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-3xl transition-shadow hover:shadow-lg"
+								tabIndex={isActive ? 0 : -1}
+								aria-label={`Open project: ${title}`}
 							>
-								<ExternalLink size={20} aria-hidden="true" />
-								<span>View Repo</span>
+								<Card className="bg-background-dark cursor-pointer">
+									<CardHeader>
+										<CardTitle className="!text-2xl !font-bold !text-gold-400 !flex !items-center !justify-between">{title}</CardTitle>
+										{new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
+									</CardHeader>
+									<CardContent>
+										<img
+											src={thumbnail}
+											alt={`${title} thumbnail`}
+											className="w-full h-auto rounded-t-3xl object-cover"
+										/>
+										<CardDescription>{description}</CardDescription>
+									</CardContent>
+								</Card>
 							</a>
-						</div>
-					</motion.div>
+						</motion.div>
 					);
 				})}
 			</div>
