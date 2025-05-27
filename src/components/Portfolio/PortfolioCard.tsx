@@ -13,19 +13,28 @@ export interface PortfolioCardProps {
   isActive: boolean;
 }
 
-const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, description, link, date, thumbnail, isActive }) => (
-  <a
-    href={link}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block focus:outline-none focus:ring-2 focus:ring-gold-400 rounded-3xl transition-shadow hover:shadow-lg"
-    tabIndex={isActive ? 0 : -1}
-    aria-label={`Open project: ${title}`}
-  >
-    <Card className="bg-background-dark cursor-pointer">
+const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, description, link, date, thumbnail }) => (
+
+    <Card className="bg-background-dark cursor-pointer border-none shadow-none">
       <CardHeader>
-        <CardTitle className="text-2xl! font-bold! !text-gold-400 flex! items-center! justify-between!">{title}</CardTitle>
-        {new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
+
+        <CardTitle className="text-2xl font-bold text-amber-400 flex items-center justify-between">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline focus:underline"
+            aria-label={`Open project: ${title}`}
+          >
+            {title}
+          </a>
+          </CardTitle>
+        <span className="text-white text-lg">{new Date(date).toLocaleDateString([], {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+        })}</span>
+
       </CardHeader>
       <CardContent>
         <img
@@ -33,10 +42,9 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, description, link,
           alt={`${title} thumbnail`}
           className="w-full h-auto rounded-t-3xl object-cover"
         />
-        <CardDescription>{description}</CardDescription>
+        <CardDescription className='mt-4 text-white text-lg' aria-label={`Project description: ${description}`}>{description}</CardDescription>
       </CardContent>
     </Card>
-  </a>
 );
 
 export default PortfolioCard;

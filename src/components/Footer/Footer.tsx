@@ -9,7 +9,7 @@ const Footer: React.FC = () => (
   <footer
     id="contact"
     aria-label="Contact and copyright information"
-    className="bg-gray-900 text-gold-400 py-8 px-6 text-center"
+    className=" text-gold-400 py-8 px-6 text-center"
   >
     <motion.div
       initial={{ opacity: 0, y: 20 }}
