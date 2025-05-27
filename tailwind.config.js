@@ -11,6 +11,10 @@ module.exports = {
         gold: {
           DEFAULT: '#FFD700',
           dark: '#BFA100',
+          400: '#FFD700',
+          500: '#FFD700',
+          600: '#BFA100',
+          700: '#8F7A00',
         },
         background: {
           DEFAULT: '#18181b',

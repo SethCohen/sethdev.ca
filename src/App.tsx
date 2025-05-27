@@ -7,7 +7,7 @@ import Footer from './components/Footer/Footer';
 
 const App: React.FC = () => {
 	return (
-		<main className="bg-gray-900 text-gold-400 font-sans leading-relaxed scroll-smooth">
+		<main className="bg-stone-950 font-sans leading-relaxed scroll-smooth">
 			<Navbar />
 			<Hero />
 			<Portfolio />

@@ -32,10 +32,19 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 !text-gold"
+        className="text-5xl md:text-6xl font-extrabold tracking-tight mb-4"
         aria-label="Hi, I'm Seth Cohen"
       >
-        <span className="!text-gold">{headingTyped}</span>
+        {headingTyped.startsWith("Hi, I'm ") ? (
+          <>
+            Hi, I'm{' '}
+            <span className="text-yellow-400">
+              {headingTyped.replace("Hi, I'm ", '')}
+            </span>
+          </>
+        ) : (
+          headingTyped
+        )}
       </motion.h1>
       <motion.p
         aria-live="polite"

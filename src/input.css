@@ -2,9 +2,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Custom styles merged from App.css */
 
@@ -39,10 +37,10 @@ section {
 .bg-background-dark {
   background-color: #18181b;
 }
-
+/* 
 .text-gold {
-  color: #FFD700;
-}
+  color: #FFD700 !important;
+} */
 
 .text-gold-dark {
   color: #BFA100;
