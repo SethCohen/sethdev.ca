@@ -37,21 +37,9 @@ section {
 .bg-background-dark {
   background-color: #18181b;
 }
-/* 
-.text-gold {
-  color: #FFD700 !important;
-} */
-
-.text-gold-dark {
-  color: #BFA100;
-}
 
 .text-foreground-dark {
   color: #a1a1aa;
-}
-
-.border-gold\/20 {
-  border-color: rgba(255, 215, 0, 0.2);
 }
 
 .shadow-lg {

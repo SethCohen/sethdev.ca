@@ -77,7 +77,7 @@ const Support: React.FC = () => (
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-gray-900 font-semibold py-3 px-6 transition-colors"
+              className="group relative flex items-center gap-2 text-gray-900 font-semibold py-3 px-6 transition-colors"
               aria-label={label}
             >
               <svg

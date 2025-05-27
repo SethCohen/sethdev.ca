@@ -9,7 +9,7 @@ const Footer: React.FC = () => (
   <footer
     id="contact"
     aria-label="Contact and copyright information"
-    className=" text-gold-400 py-8 px-6 text-center"
+    className=" py-8 px-6 text-center"
   >
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -22,7 +22,7 @@ const Footer: React.FC = () => (
         <br />
         <a
           href="mailto:sethcohen.dev@gmail.com"
-          className="underline hover:text-gold-600"
+          className="underline"
           aria-label="Send email to Seth"
         >
           sethcohen.dev@gmail.com

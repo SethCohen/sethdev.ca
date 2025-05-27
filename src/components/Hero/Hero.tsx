@@ -68,7 +68,7 @@ const Hero: React.FC = () => {
           <TooltipTrigger asChild>
             <a
               href="#portfolio"
-              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              className="group relative rounded p-2 flex items-center justify-center"
               aria-label="View Portfolio"
             >
               <Layers size={36} aria-hidden="true" />
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
           <TooltipTrigger asChild>
             <a
               href="#contact"
-              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              className="group relative rounded p-2 flex items-center justify-center"
               aria-label="Contact Me"
             >
               <Mail size={36} aria-hidden="true" />
@@ -92,7 +92,7 @@ const Hero: React.FC = () => {
           <TooltipTrigger asChild>
             <a
               href="#about-me"
-              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              className="group relative rounded p-2 flex items-center justify-center"
               aria-label="About Me"
             >
               <User size={36} aria-hidden="true" />
@@ -106,7 +106,7 @@ const Hero: React.FC = () => {
               href="https://github.com/sethcohen"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              className="group relative rounded p-2 flex items-center justify-center"
               aria-label="Github"
             >
               <svg
@@ -115,7 +115,7 @@ const Hero: React.FC = () => {
                 viewBox="0 0 24 24"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
-                className="inline fill-current text-gold-500 group-hover:text-gold-600"
+                className="inline fill-current"
               >
                 <path d={siGithub.path} />
               </svg>
@@ -129,7 +129,7 @@ const Hero: React.FC = () => {
               href="https://youtube.com/@sethcohen2185"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-gold-500 hover:bg-gold-600 rounded p-2 flex items-center justify-center"
+              className="group relative rounded p-2 flex items-center justify-center"
               aria-label="Youtube"
             >
               <svg
@@ -138,7 +138,7 @@ const Hero: React.FC = () => {
                 viewBox="0 0 24 24"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
-                className="inline fill-current text-gold-500 group-hover:text-gold-600"
+                className="inline fill-current"
               >
                 <path d={siYoutube.path} />
               </svg>
