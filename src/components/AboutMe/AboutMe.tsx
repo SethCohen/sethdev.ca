@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import { useTypewriterOnce } from '@/hooks/useTypewriterOnce';
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
 import {
-    siPython, siGnubash, siJavascript, siTypescript, siHtml5, siCss3, siDart, siLua, siKotlin, siCplusplus, siC, siScala, siClojure, siSqlite, siMongodb, siFirebase, siLatex, siReact, siGatsby, siBulma, siFlutter, siNextdotjs, siTailwindcss, siExpress, siGraphql, siDocker, siKubernetes, siGooglecloud, siGithubactions, siPandas, siNumpy, siScikitlearn, siJupyter, siAseprite, siFigma, siPycharm, siIntellijidea, siWebstorm, siAndroidstudio, siGit, siVim, siArchlinux
+    siPython, siGnubash, siJavascript, siTypescript, siHtml5, siCss3, siDart, siLua, siKotlin, siCplusplus, siC, siScala, siClojure, siSqlite, siMongodb, siFirebase, siLatex, siReact, siGatsby, siBulma, siFlutter, siNextdotjs, siTailwindcss, siExpress, siGraphql, siDocker, siKubernetes, siGooglecloud, siGithubactions, siPandas, siNumpy, siScikitlearn, siJupyter, siAseprite, siFigma, siPycharm, siIntellijidea, siWebstorm, siAndroidstudio, siGit, siVim, siArchlinux,
+    siMui,
+    siNodedotjs
 } from 'simple-icons/icons';
 
 const highlight = (text: string, keywords: string[]) => {
@@ -151,15 +153,7 @@ const AboutMe: React.FC = () => {
                                 <div className="flex flex-wrap gap-3 items-center">
                                     {[
                                         { icon: siPython, label: 'Python' },
-                                        // Custom Java icon
-                                        {
-                                            icon: {
-                                                hex: "007396",
-                                                // Java logo SVG path (Oracle's Java logo, simplified flame & cup)
-                                                path: "M12 2C10.343 2 9 3.343 9 5c0 1.657 1.343 3 3 3s3-1.343 3-3c0-1.657-1.343-3-3-3zm0 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4zm0-2c2.21 0 4-1.79 4-4 0-1.657-1.343-3-3-3s-3 1.343-3 3c0 2.21 1.79 4 4 4z"
-                                            },
-                                            label: 'Java'
-                                        },
+                                        // TODO: implement java.svg
                                         { icon: siJavascript, label: 'JavaScript' },
                                         { icon: siTypescript, label: 'TypeScript' },
                                         { icon: siHtml5, label: 'HTML5' },
@@ -171,6 +165,7 @@ const AboutMe: React.FC = () => {
                                         { icon: siC, label: 'C' },
                                         { icon: siScala, label: 'Scala' },
                                         { icon: siClojure, label: 'Clojure' },
+                                        // TODO: implement sql.svg
                                         { icon: siMongodb, label: 'NoSQL' },
                                         { icon: siGnubash, label: 'Bash' },
                                         { icon: siLatex, label: 'LaTeX' }
@@ -192,7 +187,15 @@ const AboutMe: React.FC = () => {
                             <div className="mb-4">
                                 <div className="font-semibold text-lg mb-1 text-white">Frontend:</div>
                                 <div className="flex flex-wrap gap-3 items-center">
-                                    {[{ icon: siReact, label: 'React' }, { icon: siGatsby, label: 'Gatsby' }, { icon: siBulma, label: 'Bulma' }, { icon: siFlutter, label: 'Flutter' }, { icon: siNextdotjs, label: 'Next.js' }, { icon: siTailwindcss, label: 'TailwindCSS' }].map(({ icon, label }) => (
+                                    {[
+                                        { icon: siReact, label: 'React' }, 
+                                        { icon: siGatsby, label: 'Gatsby' }, 
+                                        { icon: siMui, label: 'MaterialUI' }, 
+                                        { icon: siBulma, label: 'Bulma' }, 
+                                        { icon: siFlutter, label: 'Flutter' }, 
+                                        { icon: siNextdotjs, label: 'Next.js' }, 
+                                        { icon: siTailwindcss, label: 'TailwindCSS' }
+                                    ].map(({ icon, label }) => (
                                         <Tooltip key={label}>
                                             <TooltipTrigger asChild>
                                                 <span className="inline-flex items-center">
@@ -210,7 +213,15 @@ const AboutMe: React.FC = () => {
                             <div className="mb-4">
                                 <div className="font-semibold text-lg mb-1 text-white">Backend & DevOps:</div>
                                 <div className="flex flex-wrap gap-3 items-center">
-                                    {[ { icon: siExpress, label: 'Express.js' }, { icon: siGraphql, label: 'GraphQL' }, { icon: siDocker, label: 'Docker' }, { icon: siKubernetes, label: 'Kubernetes' }, { icon: siGooglecloud, label: 'Google Cloud Platform' }, { icon: siGithubactions, label: 'GitHub Actions' }].map(({ icon, label }) => (
+                                    {[
+                                        { icon: siNodedotjs, label: 'Node.js' }, 
+                                        { icon: siExpress, label: 'Express.js' }, 
+                                        { icon: siGraphql, label: 'GraphQL' }, 
+                                        { icon: siDocker, label: 'Docker' }, 
+                                        { icon: siKubernetes, label: 'Kubernetes' },
+                                        { icon: siGooglecloud, label: 'Google Cloud Platform' }, 
+                                        { icon: siGithubactions, label: 'GitHub Actions' }
+                                    ].map(({ icon, label }) => (
                                         <Tooltip key={label}>
                                             <TooltipTrigger asChild>
                                                 <span className="inline-flex items-center">
@@ -228,7 +239,14 @@ const AboutMe: React.FC = () => {
                             <div className="mb-4">
                                 <div className="font-semibold text-lg mb-1 text-white">Data/ML:</div>
                                 <div className="flex flex-wrap gap-3 items-center">
-                                    {[{ icon: siPandas, label: 'Pandas' }, { icon: siNumpy, label: 'NumPy' }, { icon: siScikitlearn, label: 'scikit-learn' }, { icon: siJupyter, label: 'Jupyter Notebooks' }].map(({ icon, label }) => (
+                                    {[
+                                        { icon: siPandas, label: 'Pandas' },
+                                        { icon: siNumpy, label: 'NumPy' },
+                                        { icon: siScikitlearn, label: 'scikit-learn' },
+                                        // TODO: implement matplotlib.svg
+                                        // TODO: implement seaborn.svg
+                                        { icon: siJupyter, label: 'Jupyter Notebooks' }
+                                    ].map(({ icon, label }) => (
                                         <Tooltip key={label}>
                                             <TooltipTrigger asChild>
                                                 <span className="inline-flex items-center">
@@ -246,7 +264,20 @@ const AboutMe: React.FC = () => {
                             <div className="mb-4">
                                 <div className="font-semibold text-lg mb-1 text-white">Creative & IDEs:</div>
                                 <div className="flex flex-wrap gap-3 items-center">
-                                    {[{ icon: siAseprite, label: 'Aseprite' }, { icon: siFigma, label: 'Figma' }, { icon: siPycharm, label: 'PyCharm' }, { icon: siIntellijidea, label: 'IntelliJ' }, { icon: siWebstorm, label: 'Webstorm' }, { icon: siAndroidstudio, label: 'Android Studio' }, ].map(({ icon, label }) => (
+                                    {[
+                                        // TODO: implement adobephotoshop.svg
+                                        // TODO: implement adobeillustrator.svg
+                                        // TODO: implement adobepremierepro.svg
+                                        // TODO: implement adobeaftereffects.svg
+                                        { icon: siAseprite, label: 'Aseprite' },
+                                        { icon: siFigma, label: 'Figma' },
+                                        { icon: siPycharm, label: 'PyCharm' },
+                                        { icon: siIntellijidea, label: 'IntelliJ' },
+                                        { icon: siWebstorm, label: 'Webstorm' },
+                                        { icon: siAndroidstudio, label: 'Android Studio' },
+                                        // TODO: implement vscode.svg
+                                        // TODO: implement visualstudio.svg
+                                    ].map(({ icon, label }) => (
                                         <Tooltip key={label}>
                                             <TooltipTrigger asChild>
                                                 <span className="inline-flex items-center">
@@ -264,7 +295,11 @@ const AboutMe: React.FC = () => {
                             <div className="mb-4">
                                 <div className="font-semibold text-lg mb-1 text-white">Databases:</div>
                                 <div className="flex flex-wrap gap-3 items-center">
-                                    {[{ icon: siFirebase, label: 'Firebase' }, { icon: siSqlite, label: 'SQLite' }, { icon: siMongodb, label: 'MongoDB' }, ].map(({ icon, label }) => (
+                                    {[
+                                        { icon: siFirebase, label: 'Firebase' }, 
+                                        { icon: siSqlite, label: 'SQLite' }, 
+                                        { icon: siMongodb, label: 'MongoDB' },
+                                    ].map(({ icon, label }) => (
                                         <Tooltip key={label}>
                                             <TooltipTrigger asChild>
                                                 <span className="inline-flex items-center">
@@ -282,19 +317,22 @@ const AboutMe: React.FC = () => {
                             <div>
                                 <div className="font-semibold text-lg mb-1 text-white">Other:</div>
                                 <div className="flex flex-wrap gap-3 items-center">
-                                    {[{ icon: siGit, label: 'Git' }, { icon: siVim, label: 'Vim' }, { icon: siArchlinux, label: 'Arch Linux' }].map(({ icon, label }) => (
-                                        <Tooltip key={label}>
-                                            <TooltipTrigger asChild>
-                                                <span className="inline-flex items-center">
-                                                    <svg width={24} height={24} viewBox="0 0 24 24" fill={`#${icon.hex}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="inline mr-1">
-                                                        <path d={icon.path} />
-                                                    </svg>
-                                                    <span className="sr-only">{label}</span>
-                                                </span>
-                                            </TooltipTrigger>
-                                            <TooltipContent>{label}</TooltipContent>
-                                        </Tooltip>
-                                    ))}
+                                    {[
+                                        { icon: siGit, label: 'Git' }, 
+                                        { icon: siVim, label: 'Vim' }, 
+                                        { icon: siArchlinux, label: 'Arch Linux' }].map(({ icon, label }) => (
+                                            <Tooltip key={label}>
+                                                <TooltipTrigger asChild>
+                                                    <span className="inline-flex items-center">
+                                                        <svg width={24} height={24} viewBox="0 0 24 24" fill={`#${icon.hex}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="inline mr-1">
+                                                            <path d={icon.path} />
+                                                        </svg>
+                                                        <span className="sr-only">{label}</span>
+                                                    </span>
+                                                </TooltipTrigger>
+                                                <TooltipContent>{label}</TooltipContent>
+                                            </Tooltip>
+                                        ))}
                                 </div>
                             </div>
                         </motion.div>
