@@ -43,7 +43,7 @@ const Support: React.FC = () => (
   <section
     id="support"
     aria-label="Support me section with donation options"
-    className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-gold-400 px-6 text-center"
+    className="py-16 bg-linear-to-r from-gray-900 via-gray-800 to-gray-900 text-gold-400 px-6 text-center"
   >
     <motion.h2
       initial={{ opacity: 0, y: 20 }}

@@ -24,7 +24,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, description, link,
   >
     <Card className="bg-background-dark cursor-pointer">
       <CardHeader>
-        <CardTitle className="!text-2xl !font-bold !text-gold-400 !flex !items-center !justify-between">{title}</CardTitle>
+        <CardTitle className="text-2xl! font-bold! !text-gold-400 flex! items-center! justify-between!">{title}</CardTitle>
         {new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
       </CardHeader>
       <CardContent>

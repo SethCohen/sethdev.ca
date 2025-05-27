@@ -93,7 +93,7 @@ const Portfolio: React.FC = () => {
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
-            className={`sticky top-[15vh] flex-shrink-0 max-w-3xl w-full mx-auto ${index === activeIndex ? 'pointer-events-auto z-50' : 'pointer-events-none z-10'}`}
+            className={`sticky top-[15vh] shrink-0 max-w-3xl w-full mx-auto ${index === activeIndex ? 'pointer-events-auto z-50' : 'pointer-events-none z-10'}`}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{
               opacity: 1,

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const ParallaxBackground: React.FC = () => (
   <div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
     <motion.div
-      className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-gold-500/10 via-gray-900/60 to-gold-600/10"
+      className="absolute top-0 left-0 w-full h-full bg-linear-to-r from-gold-500/10 via-gray-900/60 to-gold-600/10"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

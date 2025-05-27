@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
     <section
       id="hero"
       aria-label="Introduction and value proposition"
-      className="relative min-h-screen flex flex-col justify-center items-center bg-gradient-to-b px-6 text-center"
+      className="relative min-h-screen flex flex-col justify-center items-center bg-linear-to-b px-6 text-center"
       style={{ backgroundAttachment: 'fixed' }}
     >
       <motion.h1
