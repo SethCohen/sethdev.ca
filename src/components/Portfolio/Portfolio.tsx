@@ -85,7 +85,8 @@ const Portfolio: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-3xl font-bold mb-8 text-center z-10"
+        className="text-3xl font-bold mb-8 text-center z-10 sticky top-0 py-4"
+        style={{ marginBottom: 0 }}
       >
         Portfolio
       </motion.h2>
@@ -93,7 +94,7 @@ const Portfolio: React.FC = () => {
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
-            className={`sticky top-[15vh] shrink-0 max-w-3xl w-full mx-auto ${index === activeIndex ? 'pointer-events-auto z-50' : 'pointer-events-none z-10'}`}
+            className={`sticky top-[3vh] shrink-0 max-w-3xl w-full mx-auto ${index === activeIndex ? 'pointer-events-auto z-50' : 'pointer-events-none z-10'}`}
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{
               opacity: 1,
