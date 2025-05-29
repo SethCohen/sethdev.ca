@@ -49,6 +49,13 @@ import {
     siNodedotjs
 } from 'simple-icons/icons';
 
+import CanadaFlag from "@/assets/canadaflag.svg?react";
+import ASLFlag from "@/assets/aslflag.svg?react";
+import FranceFlag from "@/assets/franceflag.svg?react";
+import GermanFlag from "@/assets/germanflag.svg?react";
+import IranFlag from "@/assets/iranflag.svg?react";
+import MexicoFlag from "@/assets/mexicoflag.svg?react";
+
 const highlight = (text: string, keywords: string[]) => {
     // Highlight keywords
     let result = text;
@@ -134,12 +141,12 @@ const techStack = {
 
 // Language proficiency data
 const languages = [
-    { flag: '🇨🇦', name: 'English', level: 'Fluent (Native)', clb: 'CLB 9 / CEFR C2', color: 'text-amber-400' },
-    { flag: '🇲🇽', name: 'Spanish', level: 'Intermediate (CLB 5 / CEFR B1)', clb: '', color: 'text-amber-400' },
-    { flag: '🇫🇷', name: 'French', level: 'Low Intermediate (CLB 4 / CEFR A2)', clb: '', color: 'text-amber-400' },
-    { flag: '🤟', name: 'ASL', level: 'Low Intermediate (CLB 3 / CEFR A2)', clb: '', color: 'text-amber-400' },
-    { flag: '🇮🇷', name: 'Farsi', level: 'Beginner (CLB 2 / CEFR A1)', clb: '', color: 'text-amber-400' },
-    { flag: '🇩🇪', name: 'German', level: 'Beginner (CLB 1 / CEFR A1)', clb: '', color: 'text-amber-400' }
+    { flag: <CanadaFlag className="w-8 h-8 inline-block mb-1" />, name: 'English', level: 'Fluent (Native)', clb: 'CLB 9 / CEFR C2', color: 'text-amber-400' },
+    { flag: <MexicoFlag className="w-8 h-8 inline-block mb-1" />, name: 'Spanish', level: 'Intermediate (CLB 5 / CEFR B1)', clb: '', color: 'text-amber-400' },
+    { flag: <FranceFlag className="w-8 h-8 inline-block mb-1" />, name: 'French', level: 'Low Intermediate (CLB 4 / CEFR A2)', clb: '', color: 'text-amber-400' },
+    { flag: <ASLFlag className="w-8 h-8 inline-block mb-1" />, name: 'ASL', level: 'Low Intermediate (CLB 3 / CEFR A2)', clb: '', color: 'text-amber-400' },
+    { flag: <IranFlag className="w-8 h-8 inline-block mb-1" />, name: 'Farsi', level: 'Beginner (CLB 2 / CEFR A1)', clb: '', color: 'text-amber-400' },
+    { flag: <GermanFlag className="w-8 h-8 inline-block mb-1" />, name: 'German', level: 'Beginner (CLB 1 / CEFR A1)', clb: '', color: 'text-amber-400' }
 ];
 
 // About paragraphs and keywords
