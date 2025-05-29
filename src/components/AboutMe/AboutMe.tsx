@@ -55,6 +55,17 @@ import FranceFlag from "@/assets/franceflag.svg?react";
 import GermanFlag from "@/assets/germanflag.svg?react";
 import IranFlag from "@/assets/iranflag.svg?react";
 import MexicoFlag from "@/assets/mexicoflag.svg?react";
+import JavaIcon from "@/assets/java.svg?react";
+import SqlIcon from "@/assets/sql.svg?react";
+import MatplotlibIcon from "@/assets/matplotlib.svg?react";
+import SeabornIcon from "@/assets/seaborn.svg?react";
+import AdobePhotoshopIcon from "@/assets/adobephotoshop.svg?react";
+import AdobeIllustratorIcon from "@/assets/adobeillustrator.svg?react";
+import AdobePremiereProIcon from "@/assets/adobepremierpro.svg?react";
+import AdobeAfterEffectsIcon from "@/assets/adobeaftereffects.svg?react";
+import VSCodeIcon from "@/assets/vscode.svg?react";
+import VisualStudioIcon from "@/assets/visualstudio.svg?react";
+import React from "react";
 
 const highlight = (text: string, keywords: string[]) => {
     // Highlight keywords
@@ -69,73 +80,73 @@ const highlight = (text: string, keywords: string[]) => {
 // Tech stack grouped by category
 const techStack = {
     languages: [
-        { icon: siPython, label: 'Python' },
-        // TODO: implement java.svg
-        { icon: siJavascript, label: 'JavaScript' },
-        { icon: siTypescript, label: 'TypeScript' },
-        { icon: siHtml5, label: 'HTML5' },
-        { icon: siCss3, label: 'CSS3' },
-        { icon: siDart, label: 'Dart' },
-        { icon: siLua, label: 'Lua' },
-        { icon: siKotlin, label: 'Kotlin' },
-        { icon: siCplusplus, label: 'C++' },
-        { icon: siC, label: 'C' },
-        { icon: siScala, label: 'Scala' },
-        { icon: siClojure, label: 'Clojure' },
-        // TODO: implement sql.svg
-        { icon: siMongodb, label: 'NoSQL' },
-        { icon: siGnubash, label: 'Bash' },
-        { icon: siLatex, label: 'LaTeX' }
+        { icon: siPython, label: 'Python', isSimpleIcon: true },
+        { icon: <JavaIcon className="w-6 h-6" />, label: 'Java', isSimpleIcon: false },
+        { icon: siJavascript, label: 'JavaScript', isSimpleIcon: true },
+        { icon: siTypescript, label: 'TypeScript', isSimpleIcon: true },
+        { icon: siHtml5, label: 'HTML5', isSimpleIcon: true },
+        { icon: siCss3, label: 'CSS3', isSimpleIcon: true },
+        { icon: siDart, label: 'Dart', isSimpleIcon: true },
+        { icon: siLua, label: 'Lua', isSimpleIcon: true },
+        { icon: siKotlin, label: 'Kotlin', isSimpleIcon: true },
+        { icon: siCplusplus, label: 'C++', isSimpleIcon: true },
+        { icon: siC, label: 'C', isSimpleIcon: true },
+        { icon: siScala, label: 'Scala', isSimpleIcon: true },
+        { icon: siClojure, label: 'Clojure', isSimpleIcon: true },
+        { icon: <SqlIcon className="w-6 h-6" />, label: 'SQL', isSimpleIcon: false },
+        { icon: siMongodb, label: 'NoSQL', isSimpleIcon: true },
+        { icon: siGnubash, label: 'Bash', isSimpleIcon: true },
+        { icon: siLatex, label: 'LaTeX', isSimpleIcon: true }
     ],
     frontend: [
-        { icon: siReact, label: 'React' },
-        { icon: siGatsby, label: 'Gatsby' },
-        { icon: siMui, label: 'MaterialUI' },
-        { icon: siBulma, label: 'Bulma' },
-        { icon: siFlutter, label: 'Flutter' },
-        { icon: siNextdotjs, label: 'Next.js' },
-        { icon: siTailwindcss, label: 'TailwindCSS' }
+        { icon: siReact, label: 'React', isSimpleIcon: true },
+        { icon: siGatsby, label: 'Gatsby', isSimpleIcon: true },
+        { icon: siMui, label: 'MaterialUI', isSimpleIcon: true },
+        { icon: siBulma, label: 'Bulma', isSimpleIcon: true },
+        { icon: siFlutter, label: 'Flutter', isSimpleIcon: true },
+        { icon: siNextdotjs, label: 'Next.js', isSimpleIcon: true },
+        { icon: siTailwindcss, label: 'TailwindCSS', isSimpleIcon: true }
     ],
     backend: [
-        { icon: siNodedotjs, label: 'Node.js' },
-        { icon: siExpress, label: 'Express.js' },
-        { icon: siGraphql, label: 'GraphQL' },
-        { icon: siDocker, label: 'Docker' },
-        { icon: siKubernetes, label: 'Kubernetes' },
-        { icon: siGooglecloud, label: 'Google Cloud Platform' },
-        { icon: siGithubactions, label: 'GitHub Actions' }
+        { icon: siNodedotjs, label: 'Node.js', isSimpleIcon: true },
+        { icon: siExpress, label: 'Express.js', isSimpleIcon: true },
+        { icon: siGraphql, label: 'GraphQL', isSimpleIcon: true },
+        { icon: siDocker, label: 'Docker', isSimpleIcon: true },
+        { icon: siKubernetes, label: 'Kubernetes', isSimpleIcon: true },
+        { icon: siGooglecloud, label: 'Google Cloud Platform', isSimpleIcon: true },
+        { icon: siGithubactions, label: 'GitHub Actions', isSimpleIcon: true }
     ],
     dataml: [
-        { icon: siPandas, label: 'Pandas' },
-        { icon: siNumpy, label: 'NumPy' },
-        { icon: siScikitlearn, label: 'scikit-learn' },
-        // TODO: implement matplotlib.svg
-        // TODO: implement seaborn.svg
-        { icon: siJupyter, label: 'Jupyter Notebooks' }
+        { icon: siPandas, label: 'Pandas', isSimpleIcon: true },
+        { icon: siNumpy, label: 'NumPy', isSimpleIcon: true },
+        { icon: siScikitlearn, label: 'scikit-learn', isSimpleIcon: true },
+        { icon: <MatplotlibIcon className="w-6 h-6" />, label: 'Matplotlib', isSimpleIcon: false },
+        { icon: <SeabornIcon className="w-6 h-6" />, label: 'Seaborn', isSimpleIcon: false },
+        { icon: siJupyter, label: 'Jupyter Notebooks', isSimpleIcon: true }
     ],
     creative: [
-        // TODO: implement adobephotoshop.svg
-        // TODO: implement adobeillustrator.svg
-        // TODO: implement adobepremierepro.svg
-        // TODO: implement adobeaftereffects.svg
-        { icon: siAseprite, label: 'Aseprite' },
-        { icon: siFigma, label: 'Figma' },
-        { icon: siPycharm, label: 'PyCharm' },
-        { icon: siIntellijidea, label: 'IntelliJ' },
-        { icon: siWebstorm, label: 'Webstorm' },
-        { icon: siAndroidstudio, label: 'Android Studio' },
-        // TODO: implement vscode.svg
-        // TODO: implement visualstudio.svg
+        { icon: <AdobePhotoshopIcon className="w-6 h-6" />, label: 'Adobe Photoshop', isSimpleIcon: false },
+        { icon: <AdobeIllustratorIcon className="w-6 h-6" />, label: 'Adobe Illustrator', isSimpleIcon: false },
+        { icon: <AdobePremiereProIcon className="w-6 h-6" />, label: 'Adobe Premiere Pro', isSimpleIcon: false },
+        { icon: <AdobeAfterEffectsIcon className="w-6 h-6" />, label: 'Adobe After Effects', isSimpleIcon: false },
+        { icon: siAseprite, label: 'Aseprite', isSimpleIcon: true },
+        { icon: siFigma, label: 'Figma', isSimpleIcon: true },
+        { icon: siPycharm, label: 'PyCharm', isSimpleIcon: true },
+        { icon: siIntellijidea, label: 'IntelliJ', isSimpleIcon: true },
+        { icon: siWebstorm, label: 'Webstorm', isSimpleIcon: true },
+        { icon: siAndroidstudio, label: 'Android Studio', isSimpleIcon: true },
+        { icon: <VSCodeIcon className="w-6 h-6" />, label: 'VS Code', isSimpleIcon: false },
+        { icon: <VisualStudioIcon className="w-6 h-6" />, label: 'Visual Studio', isSimpleIcon: false }
     ],
     databases: [
-        { icon: siFirebase, label: 'Firebase' },
-        { icon: siSqlite, label: 'SQLite' },
-        { icon: siMongodb, label: 'MongoDB' }
+        { icon: siFirebase, label: 'Firebase', isSimpleIcon: true },
+        { icon: siSqlite, label: 'SQLite', isSimpleIcon: true },
+        { icon: siMongodb, label: 'MongoDB', isSimpleIcon: true }
     ],
     other: [
-        { icon: siGit, label: 'Git' },
-        { icon: siVim, label: 'Vim' },
-        { icon: siArchlinux, label: 'Arch Linux' }
+        { icon: siGit, label: 'Git', isSimpleIcon: true },
+        { icon: siVim, label: 'Vim', isSimpleIcon: true },
+        { icon: siArchlinux, label: 'Arch Linux', isSimpleIcon: true }
     ]
 };
 
@@ -190,11 +201,6 @@ const techIconRow = "flex flex-wrap gap-3 items-center";
 const techSectionClass = "mb-4";
 const maxWSection = "mt-12 text-left max-w-2xl mx-auto";
 const maxWLang = "mt-10 text-left max-w-lg mx-auto";
-
-interface TechStackItem {
-    icon: { path: string; hex: string };
-    label: string;
-}
 
 const AboutMe: React.FC = () => {
     const typed = useTypewriterOnce("About Me", 60);
@@ -274,13 +280,17 @@ const AboutMe: React.FC = () => {
                                         })()}
                                     </div>
                                     <div className={techIconRow}>
-                                        {(items as TechStackItem[]).map(({ icon, label }) => (
+                                        {(items as Array<{ icon: React.ReactNode | { path: string; hex: string } | null; label: string; isSimpleIcon: boolean }> ).map(({ icon, label, isSimpleIcon }) => (
                                             <Tooltip key={label}>
                                                 <TooltipTrigger asChild>
                                                     <span className="inline-flex items-center">
-                                                        <svg width={24} height={24} viewBox="0 0 24 24" fill={`#${icon.hex}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="inline mr-1">
-                                                            <path d={icon.path} />
-                                                        </svg>
+                                                        {isSimpleIcon && icon && typeof icon === 'object' && 'path' in icon && 'hex' in icon ? (
+                                                            <svg width={24} height={24} viewBox="0 0 24 24" fill={`#${icon.hex}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="inline mr-1">
+                                                                <path d={icon.path} />
+                                                            </svg>
+                                                        ) : (
+                                                            React.isValidElement(icon) ? icon : null
+                                                        )}
                                                         <span className="sr-only">{label}</span>
                                                     </span>
                                                 </TooltipTrigger>
