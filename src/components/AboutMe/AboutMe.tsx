@@ -96,7 +96,9 @@ const techStack = {
         { icon: <SqlIcon className="w-6 h-6" />, label: 'SQL', isSimpleIcon: false },
         { icon: siMongodb, label: 'NoSQL', isSimpleIcon: true },
         { icon: siGnubash, label: 'Bash', isSimpleIcon: true },
-        { icon: siLatex, label: 'LaTeX', isSimpleIcon: true }
+        { icon: siLatex, label: 'LaTeX', isSimpleIcon: true },
+        // TODO: Rust
+        // TODO: Assembly (ARM/x86)
     ],
     frontend: [
         { icon: siReact, label: 'React', isSimpleIcon: true },
@@ -105,7 +107,10 @@ const techStack = {
         { icon: siBulma, label: 'Bulma', isSimpleIcon: true },
         { icon: siFlutter, label: 'Flutter', isSimpleIcon: true },
         { icon: siNextdotjs, label: 'Next.js', isSimpleIcon: true },
-        { icon: siTailwindcss, label: 'TailwindCSS', isSimpleIcon: true }
+        { icon: siTailwindcss, label: 'TailwindCSS', isSimpleIcon: true },
+        // TODO: Vite
+        // TODO: D3.js
+        // TODO: Three.js
     ],
     backend: [
         { icon: siNodedotjs, label: 'Node.js', isSimpleIcon: true },
@@ -114,7 +119,10 @@ const techStack = {
         { icon: siDocker, label: 'Docker', isSimpleIcon: true },
         { icon: siKubernetes, label: 'Kubernetes', isSimpleIcon: true },
         { icon: siGooglecloud, label: 'Google Cloud Platform', isSimpleIcon: true },
-        { icon: siGithubactions, label: 'GitHub Actions', isSimpleIcon: true }
+        { icon: siGithubactions, label: 'GitHub Actions', isSimpleIcon: true },
+        // TODO: FastAPI
+        // TODO: Nginx
+        // TODO: CMake
     ],
     dataml: [
         { icon: siPandas, label: 'Pandas', isSimpleIcon: true },
@@ -122,7 +130,9 @@ const techStack = {
         { icon: siScikitlearn, label: 'scikit-learn', isSimpleIcon: true },
         { icon: <MatplotlibIcon className="w-6 h-6" />, label: 'Matplotlib', isSimpleIcon: false },
         { icon: <SeabornIcon className="w-6 h-6" />, label: 'Seaborn', isSimpleIcon: false },
-        { icon: siJupyter, label: 'Jupyter Notebooks', isSimpleIcon: true }
+        { icon: siJupyter, label: 'Jupyter Notebooks', isSimpleIcon: true },
+        // TODO: spaCy
+        // TODO: OpenCV
     ],
     creative: [
         { icon: <AdobePhotoshopIcon className="w-6 h-6" />, label: 'Adobe Photoshop', isSimpleIcon: false },
@@ -136,19 +146,45 @@ const techStack = {
         { icon: siWebstorm, label: 'Webstorm', isSimpleIcon: true },
         { icon: siAndroidstudio, label: 'Android Studio', isSimpleIcon: true },
         { icon: <VSCodeIcon className="w-6 h-6" />, label: 'VS Code', isSimpleIcon: false },
-        { icon: <VisualStudioIcon className="w-6 h-6" />, label: 'Visual Studio', isSimpleIcon: false }
+        { icon: <VisualStudioIcon className="w-6 h-6" />, label: 'Visual Studio', isSimpleIcon: false },
+        // TODO: DaVinci Resolve
+        // TODO: Blender
     ],
     databases: [
         { icon: siFirebase, label: 'Firebase', isSimpleIcon: true },
         { icon: siSqlite, label: 'SQLite', isSimpleIcon: true },
-        { icon: siMongodb, label: 'MongoDB', isSimpleIcon: true }
+        { icon: siMongodb, label: 'MongoDB', isSimpleIcon: true },
+        // TODO: PostgreSQL
+        // TODO: MySQL
+    ],
+    testing: [
+        // TODO: Robot Framework
+        // TODO: Pytest
+        // TODO: Jest
+        // TODO: Cypress
+        // TODO: Postman
+        // TODO: JIRA
+    ],
+    embedded: [
+        // TODO: FreeRTOS
+        // TODO: PlatformIO
+        // TODO: STM32
+        // TODO: Arduino
+        // TODO: ESP32
+        // TODO: Keil uVision
+        // TODO: GDB + OpenOCD
+        // TODO: CAN Bus
     ],
     other: [
         { icon: siGit, label: 'Git', isSimpleIcon: true },
         { icon: siVim, label: 'Vim', isSimpleIcon: true },
-        { icon: siArchlinux, label: 'Arch Linux', isSimpleIcon: true }
+        { icon: siArchlinux, label: 'Arch Linux', isSimpleIcon: true },
+        // TODO: Make
+        // TODO: Obsidian
+        // TODO: Zotero
     ]
 };
+
 
 // Language proficiency data
 const languages = [
@@ -285,7 +321,22 @@ const AboutMe: React.FC = () => {
                                                 <TooltipTrigger asChild>
                                                     <span className="inline-flex items-center">
                                                         {isSimpleIcon && icon && typeof icon === 'object' && 'path' in icon && 'hex' in icon ? (
-                                                            <svg width={24} height={24} viewBox="0 0 24 24" fill={`#${icon.hex}`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" className="inline mr-1">
+                                                            <svg
+                                                                width={24}
+                                                                height={24}
+                                                                viewBox="0 0 24 24"
+                                                                fill={
+                                                                    !icon.hex ||
+                                                                    icon.hex === '000' ||
+                                                                    icon.hex === '000000' ||
+                                                                    icon.hex === '0'
+                                                                        ? '#fff'
+                                                                        : `#${icon.hex}`
+                                                                }
+                                                                aria-hidden="true"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                className="inline mr-1"
+                                                            >
                                                                 <path d={icon.path} />
                                                             </svg>
                                                         ) : (

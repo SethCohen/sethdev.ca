@@ -6,6 +6,7 @@ import { useTypewriterOnce } from '@/hooks/useTypewriterOnce';
 import { siGithub, siYoutube } from 'simple-icons/icons';
 import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
 
+import LinkedIn from "@/assets/linkedin.svg?react";
 /**
  * Hero section with animated heading and typewriter subtitle.
  */
@@ -145,6 +146,20 @@ const Hero: React.FC = () => {
             </a>
           </TooltipTrigger>
           <TooltipContent>Youtube</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <a
+              href="https://www.linkedin.com/in/aronseth-cohen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative rounded p-2 flex items-center justify-center"
+              aria-label="LinkedIn"
+            >
+              <LinkedIn width={24} height={24} />
+            </a>
+          </TooltipTrigger>
+          <TooltipContent>LinkedIn</TooltipContent>
         </Tooltip>
       </motion.div>
     </section>
