@@ -15,7 +15,7 @@ export interface PortfolioCardProps {
 
 const PortfolioCard: React.FC<PortfolioCardProps> = ({ title, description, link, date, thumbnail }) => (
 
-    <Card className="bg-background-dark cursor-pointer border-none shadow-none">
+    <Card className="bg-background-dark border-none shadow-none">
       <CardHeader>
 
         <CardTitle className="text-2xl font-bold text-amber-400 flex items-center justify-between">
