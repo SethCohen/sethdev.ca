@@ -8,7 +8,7 @@ import {
     siJavascript,
     siTypescript,
     siHtml5,
-    siCss3,
+    siCss,
     siDart,
     siLua,
     siKotlin,
@@ -46,7 +46,29 @@ import {
     siVim,
     siArchlinux,
     siMui,
-    siNodedotjs
+    siNodedotjs,
+    siRust,
+    siVite,
+    siD3,
+    siThreedotjs,
+    siFastapi,
+    siNginx,
+    siCmake,
+    siSpacy,
+    siOpencv,
+    siDavinciresolve,
+    siBlender,
+    siPostgresql,
+    siMysql,
+    siRobotframework,
+    siPytest,
+    siJest,
+    siCypress,
+    siPostman,
+    siJira,
+    siArduino,
+    siZotero,
+    siRaspberrypi
 } from 'simple-icons/icons';
 
 import CanadaFlag from "@/assets/canadaflag.svg?react";
@@ -85,7 +107,7 @@ const techStack = {
         { icon: siJavascript, label: 'JavaScript', isSimpleIcon: true },
         { icon: siTypescript, label: 'TypeScript', isSimpleIcon: true },
         { icon: siHtml5, label: 'HTML5', isSimpleIcon: true },
-        { icon: siCss3, label: 'CSS3', isSimpleIcon: true },
+        { icon: siCss, label: 'CSS', isSimpleIcon: true },
         { icon: siDart, label: 'Dart', isSimpleIcon: true },
         { icon: siLua, label: 'Lua', isSimpleIcon: true },
         { icon: siKotlin, label: 'Kotlin', isSimpleIcon: true },
@@ -97,7 +119,7 @@ const techStack = {
         { icon: siMongodb, label: 'NoSQL', isSimpleIcon: true },
         { icon: siGnubash, label: 'Bash', isSimpleIcon: true },
         { icon: siLatex, label: 'LaTeX', isSimpleIcon: true },
-        // TODO: Rust
+        { icon: siRust, label: 'Rust', isSimpleIcon: true },
         // TODO: Assembly (ARM/x86)
     ],
     frontend: [
@@ -108,9 +130,9 @@ const techStack = {
         { icon: siFlutter, label: 'Flutter', isSimpleIcon: true },
         { icon: siNextdotjs, label: 'Next.js', isSimpleIcon: true },
         { icon: siTailwindcss, label: 'TailwindCSS', isSimpleIcon: true },
-        // TODO: Vite
-        // TODO: D3.js
-        // TODO: Three.js
+        { icon: siVite, label: 'Vite', isSimpleIcon: true },
+        { icon: siD3, label: 'D3.js', isSimpleIcon: true },
+        { icon: siThreedotjs, label: 'Three.js', isSimpleIcon: true },
     ],
     backend: [
         { icon: siNodedotjs, label: 'Node.js', isSimpleIcon: true },
@@ -120,9 +142,9 @@ const techStack = {
         { icon: siKubernetes, label: 'Kubernetes', isSimpleIcon: true },
         { icon: siGooglecloud, label: 'Google Cloud Platform', isSimpleIcon: true },
         { icon: siGithubactions, label: 'GitHub Actions', isSimpleIcon: true },
-        // TODO: FastAPI
-        // TODO: Nginx
-        // TODO: CMake
+        { icon: siFastapi, label: 'FastAPI', isSimpleIcon: true },
+        { icon: siNginx, label: 'Nginx', isSimpleIcon: true },
+        { icon: siCmake, label: 'CMake', isSimpleIcon: true },
     ],
     dataml: [
         { icon: siPandas, label: 'Pandas', isSimpleIcon: true },
@@ -131,14 +153,16 @@ const techStack = {
         { icon: <MatplotlibIcon className="w-6 h-6" />, label: 'Matplotlib', isSimpleIcon: false },
         { icon: <SeabornIcon className="w-6 h-6" />, label: 'Seaborn', isSimpleIcon: false },
         { icon: siJupyter, label: 'Jupyter Notebooks', isSimpleIcon: true },
-        // TODO: spaCy
-        // TODO: OpenCV
+        { icon: siSpacy, label: 'spaCy', isSimpleIcon: true },
+        { icon: siOpencv, label: 'OpenCV', isSimpleIcon: true },
     ],
     creative: [
         { icon: <AdobePhotoshopIcon className="w-6 h-6" />, label: 'Adobe Photoshop', isSimpleIcon: false },
         { icon: <AdobeIllustratorIcon className="w-6 h-6" />, label: 'Adobe Illustrator', isSimpleIcon: false },
         { icon: <AdobePremiereProIcon className="w-6 h-6" />, label: 'Adobe Premiere Pro', isSimpleIcon: false },
         { icon: <AdobeAfterEffectsIcon className="w-6 h-6" />, label: 'Adobe After Effects', isSimpleIcon: false },
+        { icon: siDavinciresolve, label: 'DaVinci Resolve', isSimpleIcon: true },
+        { icon: siBlender, label: 'Blender', isSimpleIcon: true },
         { icon: siAseprite, label: 'Aseprite', isSimpleIcon: true },
         { icon: siFigma, label: 'Figma', isSimpleIcon: true },
         { icon: siPycharm, label: 'PyCharm', isSimpleIcon: true },
@@ -147,41 +171,31 @@ const techStack = {
         { icon: siAndroidstudio, label: 'Android Studio', isSimpleIcon: true },
         { icon: <VSCodeIcon className="w-6 h-6" />, label: 'VS Code', isSimpleIcon: false },
         { icon: <VisualStudioIcon className="w-6 h-6" />, label: 'Visual Studio', isSimpleIcon: false },
-        // TODO: DaVinci Resolve
-        // TODO: Blender
     ],
     databases: [
         { icon: siFirebase, label: 'Firebase', isSimpleIcon: true },
         { icon: siSqlite, label: 'SQLite', isSimpleIcon: true },
         { icon: siMongodb, label: 'MongoDB', isSimpleIcon: true },
-        // TODO: PostgreSQL
-        // TODO: MySQL
+        { icon: siPostgresql, label: 'PostgreSQL', isSimpleIcon: true },
+        { icon: siMysql, label: 'MySQL', isSimpleIcon: true },
     ],
     testing: [
-        // TODO: Robot Framework
-        // TODO: Pytest
-        // TODO: Jest
-        // TODO: Cypress
-        // TODO: Postman
-        // TODO: JIRA
+        { icon: siRobotframework, label: 'Robot Framework', isSimpleIcon: true },
+        { icon: siPytest, label: 'Pytest', isSimpleIcon: true },
+        { icon: siJest, label: 'Jest', isSimpleIcon: true },
+        { icon: siCypress, label: 'Cypress', isSimpleIcon: true },
+        { icon: siPostman, label: 'Postman', isSimpleIcon: true },
+        { icon: siJira, label: 'JIRA', isSimpleIcon: true },
     ],
     embedded: [
-        // TODO: FreeRTOS
-        // TODO: PlatformIO
-        // TODO: STM32
-        // TODO: Arduino
-        // TODO: ESP32
-        // TODO: Keil uVision
-        // TODO: GDB + OpenOCD
-        // TODO: CAN Bus
+        { icon: siArduino, label: 'Arduino', isSimpleIcon: true },
+        { icon: siRaspberrypi, label: 'Raspberry Pi', isSimpleIcon: true },
     ],
     other: [
         { icon: siGit, label: 'Git', isSimpleIcon: true },
         { icon: siVim, label: 'Vim', isSimpleIcon: true },
         { icon: siArchlinux, label: 'Arch Linux', isSimpleIcon: true },
-        // TODO: Make
-        // TODO: Obsidian
-        // TODO: Zotero
+        { icon: siZotero, label: 'Zotero', isSimpleIcon: true },
     ]
 };
 
@@ -310,6 +324,8 @@ const AboutMe: React.FC = () => {
                                                 case 'dataml': return 'Data/ML:';
                                                 case 'creative': return 'Creative & IDEs:';
                                                 case 'databases': return 'Databases:';
+                                                case 'testing': return 'Testing & QA:';
+                                                case 'embedded': return 'Embedded Systems:';
                                                 case 'other': return 'Other:';
                                                 default: return '';
                                             }
