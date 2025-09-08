@@ -3,17 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>SethDev</title>
+    <title>Support Me • SethDev</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     <script type="module" crossorigin src="/assets/main-BtT4PJef.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/main-iSiqu3us.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Ensure the hash is present so the app scrolls when loaded in static hosts
+      if (!location.hash) {
+        history.replaceState(null, '', location.pathname + '#support')
+      }
+    </script>
   </body>
 </html>
