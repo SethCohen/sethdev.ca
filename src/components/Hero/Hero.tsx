@@ -1,12 +1,12 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Layers, Mail, User } from 'lucide-react';
-import { useTypewriter } from '@/hooks/useTypewriter';
-import { useTypewriterOnce } from '@/hooks/useTypewriterOnce';
-import { siGithub, siYoutube } from 'simple-icons/icons';
-import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Layers, Mail, User } from 'lucide-react'
+import { useTypewriter } from '@/hooks/useTypewriter'
+import { useTypewriterOnce } from '@/hooks/useTypewriterOnce'
+import { siGithub, siYoutube } from 'simple-icons/icons'
+import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip'
 
-import LinkedIn from "@/assets/linkedin.svg?react";
+import LinkedIn from '@/assets/linkedin.svg?react'
 /**
  * Hero section with animated heading and typewriter subtitle.
  */
@@ -19,31 +19,28 @@ const Hero: React.FC = () => {
     'Minimalist',
     'Hobbyist',
     'Learning Enthusiast',
-  ];
-  const typedText = useTypewriter(roles);
-  const heading = "Hi, I'm Seth Cohen";
-  const headingTyped = useTypewriterOnce(heading);
+  ]
+  const typedText = useTypewriter(roles)
+  const heading = "Hi, I'm Seth Cohen"
+  const headingTyped = useTypewriterOnce(heading)
 
   return (
     <section
       id="hero"
       aria-label="Introduction and value proposition"
-      className="relative min-h-screen flex flex-col justify-center items-center bg-linear-to-b px-6 text-center"
+      className="relative flex min-h-screen flex-col items-center justify-center bg-linear-to-b px-6 text-center"
       style={{ backgroundAttachment: 'fixed' }}
     >
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-5xl md:text-6xl font-extrabold tracking-tight mb-4"
+        className="mb-4 text-5xl font-extrabold tracking-tight md:text-6xl"
         aria-label="Hi, I'm Seth Cohen"
       >
         {headingTyped.startsWith("Hi, I'm ") ? (
           <>
-            Hi, I'm{' '}
-            <span className="text-yellow-400">
-              {headingTyped.replace("Hi, I'm ", '')}
-            </span>
+            Hi, I'm <span className="text-yellow-400">{headingTyped.replace("Hi, I'm ", '')}</span>
           </>
         ) : (
           headingTyped
@@ -54,7 +51,7 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="text-xl md:text-2xl font-semibold h-10"
+        className="h-10 text-xl font-semibold md:text-2xl"
       >
         {typedText}
         <span className="blinking-cursor">|</span>
@@ -69,7 +66,7 @@ const Hero: React.FC = () => {
           <TooltipTrigger asChild>
             <a
               href="#portfolio"
-              className="group relative rounded p-2 flex items-center justify-center"
+              className="group relative flex items-center justify-center rounded p-2"
               aria-label="View Portfolio"
             >
               <Layers size={36} aria-hidden="true" />
@@ -81,7 +78,7 @@ const Hero: React.FC = () => {
           <TooltipTrigger asChild>
             <a
               href="#contact"
-              className="group relative rounded p-2 flex items-center justify-center"
+              className="group relative flex items-center justify-center rounded p-2"
               aria-label="Contact Me"
             >
               <Mail size={36} aria-hidden="true" />
@@ -93,7 +90,7 @@ const Hero: React.FC = () => {
           <TooltipTrigger asChild>
             <a
               href="#about-me"
-              className="group relative rounded p-2 flex items-center justify-center"
+              className="group relative flex items-center justify-center rounded p-2"
               aria-label="About Me"
             >
               <User size={36} aria-hidden="true" />
@@ -107,7 +104,7 @@ const Hero: React.FC = () => {
               href="https://github.com/sethcohen"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative rounded p-2 flex items-center justify-center"
+              className="group relative flex items-center justify-center rounded p-2"
               aria-label="Github"
             >
               <svg
@@ -130,7 +127,7 @@ const Hero: React.FC = () => {
               href="https://youtube.com/@sethcohen2185"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative rounded p-2 flex items-center justify-center"
+              className="group relative flex items-center justify-center rounded p-2"
               aria-label="Youtube"
             >
               <svg
@@ -153,7 +150,7 @@ const Hero: React.FC = () => {
               href="https://www.linkedin.com/in/aronseth-cohen/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative rounded p-2 flex items-center justify-center"
+              className="group relative flex items-center justify-center rounded p-2"
               aria-label="LinkedIn"
             >
               <LinkedIn width={24} height={24} />
@@ -163,7 +160,7 @@ const Hero: React.FC = () => {
         </Tooltip>
       </motion.div>
     </section>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

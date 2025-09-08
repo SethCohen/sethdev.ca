@@ -1,4 +1,5 @@
 # Seth Cohen — Personal Portfolio Website
+
 [![Website](https://img.shields.io/website?label=sethdev.ca&style=for-the-badge&url=https%3A%2F%2Fsethdev.ca)](https://sethdev.ca/) ![Size](https://img.shields.io/github/repo-size/sethcohen/sethdev.ca?style=for-the-badge&label=size&color=blue)
 
 [![Vite](https://img.shields.io/badge/Built%20With-Vite-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)

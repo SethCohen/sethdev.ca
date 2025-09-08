@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
-import { siKofi, siGithubsponsors, siPaypal, siPatreon, siBuymeacoffee } from 'simple-icons/icons';
+import React from 'react'
+import { motion } from 'framer-motion'
+import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip'
+import { siKofi, siGithubsponsors, siPaypal, siPatreon, siBuymeacoffee } from 'simple-icons/icons'
 
 /**
  * Support section with donation options and accessible tooltips.
@@ -37,20 +37,20 @@ const supportLinks = [
     icon: siBuymeacoffee,
     color: `#${siBuymeacoffee.hex}`,
   },
-];
+]
 
 const Support: React.FC = () => (
   <section
     id="support"
     aria-label="Support me section with donation options"
-    className="py-16 px-6 text-center"
+    className="px-6 py-16 text-center"
   >
     <motion.h2
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="text-3xl font-bold mb-6"
+      className="mb-6 text-3xl font-bold"
     >
       Keep Me Creating
     </motion.h2>
@@ -59,9 +59,10 @@ const Support: React.FC = () => (
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="mb-8 max-w-xl mx-auto"
+      className="mx-auto mb-8 max-w-xl"
     >
-      If you appreciate my work and want to support my creative journey, you can buy me a cup of matcha or tea. Your support helps me keep creating, exploring, and learning.
+      If you appreciate my work and want to support my creative journey, you can buy me a cup of
+      matcha or tea. Your support helps me keep creating, exploring, and learning.
     </motion.p>
     <motion.div
       className="flex justify-center gap-1"
@@ -77,7 +78,7 @@ const Support: React.FC = () => (
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center gap-2 text-gray-900 font-semibold py-3 px-6 transition-colors"
+              className="group relative flex items-center gap-2 px-6 py-3 font-semibold text-gray-900 transition-colors"
               aria-label={label}
             >
               <svg
@@ -98,6 +99,6 @@ const Support: React.FC = () => (
       ))}
     </motion.div>
   </section>
-);
+)
 
-export default Support;
+export default Support

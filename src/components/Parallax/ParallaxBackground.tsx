@@ -1,12 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'
 
 /**
  * Animated parallax background using Framer Motion.
  */
 const ParallaxBackground: React.FC = () => (
-  <div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+  <div className="pointer-events-none absolute inset-0 z-0 h-full w-full overflow-hidden">
     <motion.div
-      className="absolute top-0 left-0 w-full h-full"
+      className="absolute top-0 left-0 h-full w-full"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -25,11 +25,17 @@ const ParallaxBackground: React.FC = () => (
     />
     <motion.div
       className="absolute rounded-full blur-3xl"
-      style={{ width: 500, height: 500, top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+      style={{
+        width: 500,
+        height: 500,
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+      }}
       animate={{ scale: [1, 1.1, 1] }}
       transition={{ repeat: Infinity, duration: 30, ease: 'easeInOut' }}
     />
   </div>
-);
+)
 
-export default ParallaxBackground;
+export default ParallaxBackground

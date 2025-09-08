@@ -6,11 +6,11 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-6 py-4 bg-transparent z-50">
-      <div className="text-xl font-bold cursor-default select-none">SethDev</div>
+    <nav className="fixed top-0 left-0 z-50 flex w-full items-center justify-between bg-transparent px-6 py-4">
+      <div className="cursor-default text-xl font-bold select-none">SethDev</div>
       <button
         onClick={scrollToTop}
-        className="border rounded px-3 py-1 transition flex items-center gap-1"
+        className="flex items-center gap-1 rounded border px-3 py-1 transition"
         aria-label="Scroll to top"
       >
         <ArrowUp size={16} />

@@ -1,8 +1,8 @@
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* Custom styles merged from App.css */
 
@@ -24,7 +24,9 @@ main {
   padding-right: 1rem;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Fira Mono', 'Menlo', 'Monaco', 'Consolas', monospace;
 }
 
@@ -43,10 +45,12 @@ section {
 }
 
 .shadow-lg {
-  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25);
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.25);
 }
 
-input, button, textarea {
+input,
+button,
+textarea {
   background-color: #18181b;
   color: #f4f4f5;
   border: 1px solid rgba(255, 215, 0, 0.2);
@@ -55,17 +59,19 @@ input, button, textarea {
   outline: none;
   transition: box-shadow 0.2s;
 }
-input:focus, button:focus, textarea:focus {
-  box-shadow: 0 0 0 2px #FFD700;
+input:focus,
+button:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px #ffd700;
 }
 
 a {
-  color: #FFD700;
+  color: #ffd700;
   text-decoration: underline;
   transition: color 0.2s;
 }
 a:hover {
-  color: #BFA100;
+  color: #bfa100;
 }
 
 .flex-center {
@@ -85,7 +91,7 @@ a:hover {
 }
 
 .active {
-  color: #FFD700;
+  color: #ffd700;
 }
 
 .subtle {
@@ -98,8 +104,13 @@ a:hover {
   animation: blink 1.2s steps(2, start) infinite;
 }
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 @theme inline {
